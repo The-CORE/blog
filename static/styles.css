@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    word-wrap: break-word;
+    background-image: url("background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    min-width: 300px;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+h2, h3, h4, h5, h6 {
+    padding: 20px 0 10px 0;
+}
+
+ul li {
+    list-style-position: inside;
+}
+
+.title {
+    font-size: 3em;
+    text-align: center;
+    background-color: rgb(33, 37, 48);
+    width: 100%;
+}
+
+.time {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.header {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 200px;
+}
+
+.abstract {
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(20, 70, 255);
+}
+
+.post-body {
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(33, 37, 48);
+}
+
+.footer {
+    padding: 20px;
+    background-color: rgb(33, 37, 48);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+}

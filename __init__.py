@@ -36,14 +36,14 @@ def build_pages():
             post_name = post_data['name']
             post_time = post_data['time']
 
-        with open(abstract_directory) as post_abstract_markdown_file:
-            abstract_html = markdown.markdown(post_abstract_markdown_file.read())
+        with open(abstract_directory) as abstract_markdown_file:
+            abstract_html = markdown.markdown(abstract_markdown_file.read())
 
-        with open(body_directory) as post_body_markdown_file:
-            body_html = markdown.markdown(post_body_markdown_file.read())
+        with open(body_directory) as body_markdown_file:
+            body_html = markdown.markdown(body_markdown_file.read())
 
-        with open(TEMPLATE_DIRECTORY) as post_template_file:
-            whole_post = post_template_file.read().format(
+        with open(TEMPLATE_DIRECTORY) as template_file:
+            whole_post = template_file.read().format(
                 post_name,
                 post_name,
                 post_time,
@@ -53,7 +53,7 @@ def build_pages():
 
         post_output_directory = os.path.join(
             OUTPUT_DIRECTORY,
-            post_name,
+            post_name.lower().replace(' ', '-'),
             'index.html'
         )
         os.makedirs(os.path.dirname(post_output_directory), exist_ok=True)
