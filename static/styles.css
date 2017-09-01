@@ -51,14 +51,14 @@ ul li {
 }
 
 .abstract {
-    margin: 30px;
+    margin: 40px;
     padding: 20px;
     border-radius: 10px;
     background-color: rgb(20, 70, 255);
 }
 
 .post-body {
-    margin: 30px;
+    margin: 40px;
     padding: 20px;
     border-radius: 10px;
     background-color: rgb(33, 37, 48);
