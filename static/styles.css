@@ -27,6 +27,11 @@ ul li {
     list-style-position: inside;
 }
 
+.content img {
+    width: 80%;
+    margin: 30px 10%;
+}
+
 .title {
     font-size: 3em;
     text-align: center;
