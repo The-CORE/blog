@@ -64,8 +64,7 @@ def build_pages():
 
 def build_index():
     """
-    Build pages should be called first. Based on all the already built pages,
-    this constructs an index page.
+    Constructs and index page.
     """
     pass
 
