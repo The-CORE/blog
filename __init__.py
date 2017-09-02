@@ -11,6 +11,11 @@ ABSTRACT_FILE_NAME = 'abstract.md'
 BODY_FILE_NAME = 'body.md'
 TEMPLATE_DIRECTORY = os.path.join(ROOT, 'template.html')
 OUTPUT_DIRECTORY = ROOT
+HOME_TITLE = 'Right. Why?'
+HOME_ABSTRACT = 'Just some words about some things. A blog by James Wright, \
+    an (ape descended) member of species homo-sapiens, who happens to call Sol \
+    3 home.'
+NUMBER_OF_POSTS_ON_HOME = 5
 
 
 def build():
@@ -19,6 +24,7 @@ def build():
     """
     build_pages()
     build_index()
+    build_archive()
 
 
 def build_pages():
@@ -45,7 +51,7 @@ def build_pages():
 
         with open(TEMPLATE_DIRECTORY) as template_file:
             whole_post = template_file.read().format(
-                post_name,
+                'WrightWhy Blog | ' + post_name,
                 post_name,
                 post_time,
                 abstract_html,
@@ -65,6 +71,13 @@ def build_pages():
 def build_index():
     """
     Constructs and index page.
+    """
+    pass
+
+
+def build_archive():
+    """
+    Sets up an archive page.
     """
     pass
 
