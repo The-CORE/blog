@@ -56,6 +56,12 @@ a {
     border-radius: 10px;
 }
 
+.index-break {
+    border-top: 15px dashed rgb(20, 70, 255);
+    border-bottom: 0px;
+    padding-bottom: 20px;
+}
+
 .read-more-container {
     margin: 10px auto 0 auto;
     width: 90%;

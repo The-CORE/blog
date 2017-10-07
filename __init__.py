@@ -18,6 +18,9 @@ TEMPLATE_TRUNCATED_POST_DIRECTORY = os.path.join(
 )
 OUTPUT_DIRECTORY = ROOT
 NUMBER_OF_POSTS_ON_INDEX = 5
+HOME_TITLE = 'Right. Why?'
+HOME_ABSTRACT = 'Just some words about some things. A blog by James Wright, \
+    a member of the species homo-sapiens, who happens to call Sol 3 home.'
 
 
 def build():
@@ -115,7 +118,11 @@ def build_index(posts):
             abstract=post['abstract_html']
         )
 
-    whole_index = index_template.format(truncated_posts_html)
+    whole_index = index_template.format(
+        HOME_TITLE,
+        HOME_ABSTRACT,
+        truncated_posts_html
+    )
 
     index_output_directory = os.path.join(
         OUTPUT_DIRECTORY,
