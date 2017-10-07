@@ -1,2 +1,2 @@
 # blog
-Hopefully, eventually, a static blog plus the stuff used to generate it.
+A static blog, plus the stuff used to generate it.

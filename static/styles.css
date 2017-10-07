@@ -11,7 +11,7 @@ body {
     background-image: url("background.png");
     background-attachment: fixed;
     background-size: cover;
-    min-width: 300px;
+    min-width: 350px;
 }
 
 h1 {
@@ -27,6 +27,40 @@ ul li {
     list-style-position: inside;
 }
 
+a {
+    color: rgb(0, 255, 51);
+}
+
+.home-link {
+    display: inline-block;
+    float: left;
+    background-color: rgb(33, 37, 48);
+    padding: 15px;
+    border-bottom-right-radius: 10px;
+    font-size: 1.1em;
+}
+
+.archive-link {
+    display: inline-block;
+    float: right;
+    background-color: rgb(33, 37, 48);
+    padding: 15px;
+    border-bottom-left-radius: 10px;
+    font-size: 1.1em;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: rgb(33, 37, 48);
+    padding: 5px 20px 8px 20px;
+    border-radius: 10px;
+}
+
+.read-more-container {
+    margin: 10px auto 0 auto;
+    width: 90%;
+}
+
 .content img {
     width: 80%;
     margin: 30px 10%;
@@ -37,18 +71,18 @@ ul li {
     text-align: center;
     background-color: rgb(33, 37, 48);
     width: 100%;
+    margin-top: 20px;
 }
 
 .time {
     text-align: center;
-    padding-top: 20px;
+    padding: 20px 0;
 }
 
 .header {
     display: inline-block;
     width: 100%;
     text-align: center;
-    padding: 20px 0;
 }
 
 .logo {
@@ -56,17 +90,19 @@ ul li {
 }
 
 .abstract {
-    margin: 40px;
+    margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
     background-color: rgb(20, 70, 255);
+    width: 90%;
 }
 
 .post-body {
-    margin: 40px;
+    margin: 40px auto;
     padding: 20px;
     border-radius: 10px;
     background-color: rgb(33, 37, 48);
+    width: 90%;
 }
 
 .footer {
@@ -77,4 +113,17 @@ ul li {
     text-decoration: none;
     width: 100%;
     display: inline-block;
+    margin-top: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+    .post-body {
+        width: 1080px;
+    }
+    .abstract {
+        width: 1080px;
+    }
+    .read-more-container {
+        width: 1080px;
+    }
 }
