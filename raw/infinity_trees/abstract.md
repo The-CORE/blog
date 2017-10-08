@@ -16,7 +16,14 @@ integer.
 
 <br>
 
-Or maybe it doesn't. Infinity is complicated.  
-And I'm not very good at marketing.
+Or maybe it doesn't. Infinity is complicated. I certainly didn't do remotely
+enough research.  
 
-![Infinity trees diagram](..\static\infinity_trees\infinity_trees.svg "Yes, I know there are duplicates. I'll get there eventually.")
+<br>
+
+I'm also not very good at marketing.
+
+![Infinity trees diagram](
+    ..\static\infinity_trees\infinity_trees.svg
+    "Yes, I know there are duplicates. I'll get there eventually."
+)
