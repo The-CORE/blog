@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 20px;
+    font-weight: 500;
+}
+
 body {
     color: white;
     font-family: "Courier New", Courier, monospace;
@@ -15,11 +20,20 @@ body {
 }
 
 h1 {
+    font-size: 3rem;
+    text-align: center;
+    background-color: rgb(33, 37, 48);
+    width: 100%;
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+h2 {
     text-align: center;
     padding: 10px;
 }
 
-h2, h3, h4, h5, h6 {
+h3, h4, h5, h6 {
     padding: 20px 0 10px 0;
 }
 
@@ -32,8 +46,6 @@ a {
 }
 
 blockquote {
-    color: rgb(200, 230, 200);
-    border-left-color: rgb(123, 126, 129);
     border-left-style: solid;
     border-left-width: 4px;
     padding-left: 15px;
@@ -45,7 +57,7 @@ blockquote {
     background-color: rgb(33, 37, 48);
     padding: 15px;
     border-bottom-right-radius: 10px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 .archive-link {
@@ -54,7 +66,7 @@ blockquote {
     background-color: rgb(33, 37, 48);
     padding: 15px;
     border-bottom-left-radius: 10px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 .read-more {
@@ -65,7 +77,7 @@ blockquote {
 }
 
 .index-break {
-    border-top: 15px dashed rgb(20, 70, 255);
+    border-top: 15px dashed rgb(0, 20, 170);
     border-bottom: 0px;
     padding-bottom: 20px;
 }
@@ -78,14 +90,6 @@ blockquote {
 .content img {
     width: 80%;
     margin: 30px 10%;
-}
-
-.title {
-    font-size: 3em;
-    text-align: center;
-    background-color: rgb(33, 37, 48);
-    width: 100%;
-    margin-top: 20px;
 }
 
 .time {
@@ -107,7 +111,7 @@ blockquote {
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
-    background-color: rgb(20, 70, 255);
+    background-color: rgb(0, 30, 180);
     width: 90%;
 }
 
