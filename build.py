@@ -1,6 +1,7 @@
 import os
 import json
 import markdown
+import time
 from datetime import datetime
 
 
@@ -193,7 +194,22 @@ def decimal_time():
     seconds_into_this_year = minutes_into_this_year * 60 + second
     microseconds_into_this_year = seconds_into_this_year * 1000000 + microsecond
 
-    return year + microseconds_into_this_year / microseconds_in_this_year
+    time_string = str(
+        year + microseconds_into_this_year / microseconds_in_this_year
+    )
+
+    # Offsets due to timezone.
+    if time.localtime().tm_isdst == 0:
+        # If not in daylight savings.
+        microseconds_offset = time.timezone * -1000000
+    else:
+        # If daylight savings.
+        microseconds_offset = time.altzone * -1000000
+    year_offset = microseconds_offset / microseconds_in_this_year
+
+    offset_string = ('+' if year_offset >= 0 else '') + str(year_offset)
+
+    return time_string[:16].ljust(16) + offset_string[:16].ljust(16)
 
 
 if __name__ == '__main__':
