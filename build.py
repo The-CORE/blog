@@ -30,7 +30,9 @@ HOME_ABSTRACT = 'Just some words about some things. A blog by James Wright, \
     a member of the species homo-sapiens, who happens to call Sol 3 home.'
 MATHJAX_SCRIPTS = '''
     <script type='text/x-mathjax-config'>
-        MathJax.Hub.Config({tex2jax: {inlineMath: [['\\(','\\)']]}});
+        MathJax.Hub.Config(
+            {tex2jax: {inlineMath: [['$','$']]}, showMathMenu: false}
+        );
     </script>
     <script
         type='text/javascript'
@@ -81,11 +83,17 @@ def _get_posts():
                 post_data['time'] = post_time
                 json.dump(post_data, post_data_json_file)
 
+        markdown_with_header_ids = markdown.Markdown(extensions=['markdown.extensions.toc'])
+
         with open(abstract_directory) as abstract_markdown_file:
-            abstract_html = markdown.markdown(abstract_markdown_file.read())
+            abstract_html = markdown_with_header_ids.convert(
+                abstract_markdown_file.read()
+            )
 
         with open(body_directory) as body_markdown_file:
-            body_html = markdown.markdown(body_markdown_file.read())
+            body_html = markdown_with_header_ids.convert(
+                body_markdown_file.read()
+            )
 
         posts.append(
             {

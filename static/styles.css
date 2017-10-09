@@ -51,6 +51,10 @@ blockquote {
     padding-left: 15px;
 }
 
+p {
+    line-height: 120%;
+}
+
 .home-link {
     display: inline-block;
     float: left;
@@ -112,7 +116,7 @@ blockquote {
     padding: 20px;
     border-radius: 10px;
     background-color: rgb(0, 55, 200);
-    width: 90%;
+    width: 80%;
 }
 
 .post-body {
@@ -120,7 +124,7 @@ blockquote {
     padding: 20px;
     border-radius: 10px;
     background-color: rgb(33, 37, 48);
-    width: 90%;
+    width: 80%;
 }
 
 .footer {
@@ -134,7 +138,7 @@ blockquote {
     margin-top: 20px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1350px) {
     .post-body {
         width: 1080px;
     }
