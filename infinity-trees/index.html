@@ -10,6 +10,16 @@
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
             user-scalable=no"
         >
+        
+    <script type='text/x-mathjax-config'>
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['\(','\)']]}});
+    </script>
+    <script
+        type='text/javascript'
+        async
+        src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML'>
+    </script>
+    
     </head>
     <body>
         <a class='home-link' href='/'>
@@ -19,7 +29,7 @@
             ARCHIVE
         </a>
         <div class='header'>
-            <a href='http://blog.wrightwhy.com' target='_blank'>
+            <a href='http://wrightwhy.com' target='_blank'>
                 <img
                     src='../static/question_mark.svg'
                     class='logo'
@@ -28,9 +38,9 @@
         </div>
         <div class='content'>
             <h1 class='title'>Infinity Trees</h1>
-            <div class='time'>2017.77140044828+0.0012557077625</div>
-            <div class='abstract'>
-<h2>How many numbers are there between zero and one?</h2>
+<div class='time'>2017.77140044828+0.0012557077625</div>
+<div class='abstract'>
+    <h2>How many numbers are there between zero and one?</h2>
 <p>Well, quite a few more than there are integers apparently. Uncountably many.
 Which makes sense really, because it isn't particularly easy to count them.</p>
 <p><br></p>
@@ -44,20 +54,26 @@ Damn.</p>
 because I think it might map every real number between zero and one to a unique
 integer.</p>
 <p><br></p>
-<p>Or maybe it doesn't. Infinity is complicated. I certainly didn't do remotely
-enough research.  </p>
+<p>Or maybe it doesn't. Infinity is complicated, and I didn't really do enough
+research.  </p>
 <p><br></p>
 <p>I'm also not very good at marketing.</p>
 <p><img alt="Infinity trees diagram" src="..\static\infinity_trees\infinity_trees.svg" title="Yes, I know there are duplicates. I'll get there eventually." /></p>
-            </div>
-            <div class='post-body'>
-<h2>The Diagonal Argument</h2>
-<p>Vsauce: https://www.youtube.com/watch?v=s86-Z-CbaHA<br />
-Numberphile: https://www.youtube.com/watch?v=elvOZm0d4H0<br />
-Wikipedia: https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument  </p>
-            </div>
+</div>
+<div class='post-body'>
+    <h2>The Diagonal Argument</h2>
+<p>A typical argument given for there being more numbers between zero and one is
+Cantor's Diagonal Argument. It is undoubtable put much better by
+<a href="https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument">Wikipedia</a>,
+<a href="https://www.youtube.com/watch?v=elvOZm0d4H0">Numberphile</a>, and
+<a href="https://www.youtube.com/watch?v=s86-Z-CbaHA">Vsauce</a>, but below I shall attempt
+to describe it as well.</p>
+<p>When (a \ne 0), there are two solutions to (ax^2 + bx + c = 0) and they are
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
+</div>
+
         </div>
-        <a class='footer' href='http://wrightwhy.com' target='_blank'>
+        <a class='footer' href='http://thewrongjames.com' target='_blank'>
             © James Wright 2017
             <br>
             (@thewrongjames)

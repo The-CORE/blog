@@ -1,1 +1,7 @@
-{"name": "Infinity Trees", "is_new": false, "time": "2017.77140044828+0.0012557077625"}
+{
+    "name": "Infinity Trees",
+    "is_new": false,
+    "time": "2017.77140044828+0.0012557077625",
+    "requires_maths_scripts": true,
+    "requires_maths_scripts_for_abstract": false
+}

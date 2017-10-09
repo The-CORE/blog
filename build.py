@@ -10,9 +10,15 @@ RAW_DATA_DIRECTORY = os.path.join(ROOT, 'raw')
 DATA_FILE_NAME = 'data.json'
 ABSTRACT_FILE_NAME = 'abstract.md'
 BODY_FILE_NAME = 'body.md'
-TEMPLATE_POST_DIRECTORY = os.path.join(ROOT, 'template_post.html')
-TEMPLATE_INDEX_DIRECTORY = os.path.join(ROOT, 'template_index.html')
-TEMPLATE_ARCHIVE_DIRECTORY = os.path.join(ROOT, 'template_archive.html')
+TEMPLATE_POST_CONTENT_DIRECTORY = os.path.join(
+    ROOT,
+    'template_post_content.html'
+)
+TEMPLATE_INDEX_CONTENT_DIRECTORY = os.path.join(
+    ROOT,
+    'template_index_content.html'
+)
+TEMPLATE_PAGE_DIRECTORY = os.path.join(ROOT, 'template_page.html')
 TEMPLATE_TRUNCATED_POST_DIRECTORY = os.path.join(
     ROOT,
     'template_truncated_post.html'
@@ -22,6 +28,20 @@ NUMBER_OF_POSTS_ON_INDEX = 5
 HOME_TITLE = 'Right. Why?'
 HOME_ABSTRACT = 'Just some words about some things. A blog by James Wright, \
     a member of the species homo-sapiens, who happens to call Sol 3 home.'
+MATHJAX_SCRIPTS = '''
+    <script type='text/x-mathjax-config'>
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['\\(','\\)']]}});
+    </script>
+    <script
+        type='text/javascript'
+        async
+        src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML'>
+    </script>
+    '''
+INDEX_STATIC_DIRECTORY = 'static'
+POST_STATIC_DIRECTORY = '../static'
+# The above to variables are not for file paths, but web links, so, don't need
+# to be joined with os.path.join.
 
 
 def build():
@@ -50,6 +70,10 @@ def _get_posts():
             post_name = post_data['name']
             post_is_new = post_data['is_new']
             post_time = decimal_time() if post_is_new else post_data['time']
+            requires_maths_scripts = post_data['requires_maths_scripts']
+            requires_maths_scripts_for_abstract = post_data[
+                'requires_maths_scripts_for_abstract'
+            ]
 
         if post_is_new:
             with open(data_directory, 'w') as post_data_json_file:
@@ -68,7 +92,10 @@ def _get_posts():
                 'post_name': post_name,
                 'post_time': post_time,
                 'abstract_html': abstract_html,
-                'body_html': body_html
+                'body_html': body_html,
+                'requires_maths_scripts': requires_maths_scripts,
+                'requires_maths_scripts_for_abstract': \
+                    requires_maths_scripts_for_abstract
             }
         )
 
@@ -80,14 +107,21 @@ def build_pages(posts):
     Parses all the pages, and places the output in the correct directory.
     """
     for post in posts:
-        with open(TEMPLATE_POST_DIRECTORY) as template_file:
+        with open(TEMPLATE_POST_CONTENT_DIRECTORY) as template_file:
+            post_content = template_file.read().format(
+                title=post['post_name'],
+                time=post['post_time'],
+                abstract=post['abstract_html'],
+                post_body=post['body_html']
+            )
 
+        with open(TEMPLATE_PAGE_DIRECTORY) as template_file:
             whole_post = template_file.read().format(
-                post['post_name'],
-                post['post_name'],
-                post['post_time'],
-                post['abstract_html'],
-                post['body_html']
+                title=post['post_name'] + ' | ',
+                static_directory=POST_STATIC_DIRECTORY,
+                extra_scripts=MATHJAX_SCRIPTS if \
+                    post['requires_maths_scripts'] else '',
+                content=post_content
             )
 
         post_output_directory = os.path.join(
@@ -104,12 +138,15 @@ def build_index(posts):
     """
     Constructs an index page, containing links to the most recent posts.
     """
-    with open(TEMPLATE_INDEX_DIRECTORY) as template_file:
+    with open(TEMPLATE_PAGE_DIRECTORY) as template_file:
+        page_template = template_file.read()
+    with open(TEMPLATE_INDEX_CONTENT_DIRECTORY) as template_file:
         index_template = template_file.read()
     with open(TEMPLATE_TRUNCATED_POST_DIRECTORY) as template_file:
         truncated_post_template = template_file.read()
 
     truncated_posts_html = ''
+    requires_maths_scripts_for_abstract = False
     for post in sorted(posts, key=lambda post: post['post_time'], \
             reverse=True)[:NUMBER_OF_POSTS_ON_INDEX]:
         truncated_posts_html += truncated_post_template.format(
@@ -118,11 +155,21 @@ def build_index(posts):
             time=post['post_time'],
             abstract=post['abstract_html']
         )
+        if post['requires_maths_scripts_for_abstract']:
+            requires_maths_scripts_for_abstract = True
 
-    whole_index = index_template.format(
-        HOME_TITLE,
-        HOME_ABSTRACT,
-        truncated_posts_html
+    index_content = index_template.format(
+        title=HOME_TITLE,
+        description=HOME_ABSTRACT,
+        post_list=truncated_posts_html
+    )
+
+    whole_index = page_template.format(
+        title='',
+        static_directory=INDEX_STATIC_DIRECTORY,
+        extra_scripts=MATHJAX_SCRIPTS if requires_maths_scripts_for_abstract \
+            else '',
+        content=index_content
     )
 
     index_output_directory = os.path.join(
@@ -137,12 +184,13 @@ def build_archive(posts):
     """
     Constructs an archive page, containing links to all posts ever made.
     """
-    with open(TEMPLATE_ARCHIVE_DIRECTORY) as template_file:
-        archive_template = template_file.read()
+    with open(TEMPLATE_PAGE_DIRECTORY) as template_file:
+        page_template = template_file.read()
     with open(TEMPLATE_TRUNCATED_POST_DIRECTORY) as template_file:
         truncated_post_template = template_file.read()
 
     truncated_posts_html = ''
+    requires_maths_scripts_for_abstract = False
     for post in sorted(posts, key=lambda post: post['post_time'], reverse=True):
         truncated_posts_html += truncated_post_template.format(
             link=post['post_name'].lower().replace(' ', '-'),
@@ -150,8 +198,16 @@ def build_archive(posts):
             time=post['post_time'],
             abstract=post['abstract_html']
         )
+        if post['requires_maths_scripts_for_abstract']:
+            requires_maths_scripts_for_abstract = True
 
-    whole_archive = archive_template.format(truncated_posts_html)
+    whole_archive = page_template.format(
+        title='ARCHIVE | ',
+        static_directory=INDEX_STATIC_DIRECTORY,
+        extra_scripts=MATHJAX_SCRIPTS if requires_maths_scripts_for_abstract \
+            else '',
+        content=truncated_posts_html
+    )
 
     archive_output_directory = os.path.join(
         OUTPUT_DIRECTORY,

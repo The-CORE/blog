@@ -16,8 +16,8 @@ integer.
 
 <br>
 
-Or maybe it doesn't. Infinity is complicated. I certainly didn't do remotely
-enough research.  
+Or maybe it doesn't. Infinity is complicated, and I didn't really do enough
+research.  
 
 <br>
 

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>WrightWhy</title>
-        <link rel='stylesheet' href='static/styles.css' />
-        <link rel='shortcut icon' href='static/favicon.ico' />
+        <title>{title}WrightWhy</title>
+        <link rel='stylesheet' href='{static_directory}/styles.css' />
+        <link rel='shortcut icon' href='{static_directory}/favicon.ico' />
         <meta charset="UTF-8">
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
             user-scalable=no"
         >
+        {extra_scripts}
     </head>
     <body>
         <a class='home-link' href='/'>
@@ -19,19 +20,17 @@
             ARCHIVE
         </a>
         <div class='header'>
-            <a href='http://blog.wrightwhy.com' target='_blank'>
-                <img src='static/question_mark.svg' class='logo'>
+            <a href='http://wrightwhy.com' target='_blank'>
+                <img
+                    src='{static_directory}/question_mark.svg'
+                    class='logo'
+                >
             </a>
         </div>
         <div class='content'>
-        <h1>{}</h1>
-        <div class='post-body'>
-            <p>{}</p>
+            {content}
         </div>
-        <hr class='index-break'>
-{}
-        </div>
-        <a class='footer' href='http://wrightwhy.com' target='_blank'>
+        <a class='footer' href='http://thewrongjames.com' target='_blank'>
             © James Wright 2017
             <br>
             (@thewrongjames)
