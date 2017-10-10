@@ -30,11 +30,10 @@ h1 {
 
 h2 {
     text-align: center;
-    padding: 10px;
 }
 
-h3, h4, h5, h6 {
-    padding: 20px 0 10px 0;
+h2, h3, h4, h5, h6 {
+    padding: 15px 0;
 }
 
 ul li {
@@ -53,6 +52,16 @@ blockquote {
 
 p {
     line-height: 120%;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+table, th, td {
+    border: 3px solid white;
+    padding: 10px;
 }
 
 .home-link {

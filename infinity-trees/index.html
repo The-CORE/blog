@@ -204,6 +204,11 @@ itself.  </p>
 figures displayed is to represent the relevant power of two to be changed at
 that particular depth down the tree.  </p>
 <p><br></p>
+<p>Also, you may have noticed the duplicates. Each number appearing infinitely
+many times in fact, with every left branch of the tree being the number above
+it. While this may be a strange way of counting something, it was necessary to
+continue to subdivided the numbers.  </p>
+<p><br></p>
 <p>Most importantly though: the diagram shows that each row can quite easily be
 counted. This tree halves reals between zero and one, over and over again, and
 goes on forever, but, as each row is clearly finite, you won't run out of
@@ -211,20 +216,72 @@ integers to count with. As this tree never ends, every combination of digits
 that was expressed in the <a href="#the-diagonal-argument">diagonal argument</a> should
 appear. This hand-waving argument seems fine to me, it seems to me that we can
 in fact list, or count, all of the real numbers, mapping them to integers just
-by counting along the rows. However, I will go into the actual processes of
-doing this mapping below.</p>
-<p><br></p>
-<p>You may have noticed the duplicates. Each number appearing infinitely many
-times in fact, with every left branch of the tree being the number above it.
-While this may be a strange way of counting something, it was necessary to
-continue to subdivided the numbers.</p>
+by counting along the rows.  </p>
 <h3 id="coordinates">Coordinates</h3>
-<p>To formalise this further, we can give each position on the tree a pair</p>
+<p>However, we can formalise this further, we can give each position on the tree a
+pair of coordinates, one for its row (let's call that $a$), and another for its
+position in its row (let's call that $b$). I have zero indexed them out of
+habit.  </p>
+<p><img alt="Infinity trees diagram with coordinates" src="..\static\infinity_trees\infinity_trees_with_coordinates.svg" title="Everything that follows could possibly have been made a little nicer had I not zero-indexed a." /></p>
+<p>Colons can be used to align columns.</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th align="center">Are</th>
+<th align="right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td align="center">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody>
+</table>
+<p>There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the
+raw Markdown line up prettily. You can also use inline Markdown.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><br><br></p>
 <h2 id="i-expect-to-be-wrong">I Expect to be Wrong</h2>
-<p>This is something that it looks like a lot of smart people have spent quite a
-while thinking about, and, it appears, all seem to agree on. So, I certainly
-expect to be wrong about this, but I do look forward to finding out where, and
-why.</p>
+<p>Despite the fact that this seems to make sense to me, this is also something
+that it looks like a lot of smart people have spent quite a while thinking
+about, and all seem to agree on. So, I certainly expect to be wrong about this.  </p>
+<p><br></p>
+<p>However, I do look forward to finding out where, and why. If you want to let me
+know, there are details just below.</p>
 </div>
 
         </div>

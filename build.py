@@ -44,6 +44,7 @@ INDEX_STATIC_DIRECTORY = 'static'
 POST_STATIC_DIRECTORY = '../static'
 # The above to variables are not for file paths, but web links, so, don't need
 # to be joined with os.path.join.
+EXTENSIONS = ['markdown.extensions.toc', 'markdown.extensions.tables']
 
 
 def build():
@@ -83,15 +84,15 @@ def _get_posts():
                 post_data['time'] = post_time
                 json.dump(post_data, post_data_json_file)
 
-        markdown_with_header_ids = markdown.Markdown(extensions=['markdown.extensions.toc'])
+        markdown_with_extensions = markdown.Markdown(extensions=EXTENSIONS)
 
         with open(abstract_directory) as abstract_markdown_file:
-            abstract_html = markdown_with_header_ids.convert(
+            abstract_html = markdown_with_extensions.convert(
                 abstract_markdown_file.read()
             )
 
         with open(body_directory) as body_markdown_file:
-            body_html = markdown_with_header_ids.convert(
+            body_html = markdown_with_extensions.convert(
                 body_markdown_file.read()
             )
 

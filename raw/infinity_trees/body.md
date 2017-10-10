@@ -173,6 +173,13 @@ that particular depth down the tree.
 
 <br>
 
+Also, you may have noticed the duplicates. Each number appearing infinitely
+many times in fact, with every left branch of the tree being the number above
+it. While this may be a strange way of counting something, it was necessary to
+continue to subdivided the numbers.  
+
+<br>
+
 Most importantly though: the diagram shows that each row can quite easily be
 counted. This tree halves reals between zero and one, over and over again, and
 goes on forever, but, as each row is clearly finite, you won't run out of
@@ -180,27 +187,36 @@ integers to count with. As this tree never ends, every combination of digits
 that was expressed in the [diagonal argument](#the-diagonal-argument) should
 appear. This hand-waving argument seems fine to me, it seems to me that we can
 in fact list, or count, all of the real numbers, mapping them to integers just
-by counting along the rows. However, I will go into the actual processes of
-doing this mapping below.
-
-<br>
-
-You may have noticed the duplicates. Each number appearing infinitely many
-times in fact, with every left branch of the tree being the number above it.
-While this may be a strange way of counting something, it was necessary to
-continue to subdivided the numbers.
+by counting along the rows.  
 
 ### Coordinates
 
-To formalise this further, we can give each position on the tree a pair of
-coordinates, one for its row, and another for its position in its row.
+However, we can formalise this further. The first step on the road to
+one-to-one mapping, is two-to-one mapping.  
+
+<br>
+
+We can give each position on the tree a pair of coordinates, one for its row
+(let's call that $a$), and another for its position in its row (let's call that
+$b$). I have zero indexed them out of habit.
+
+![Infinity trees diagram with coordinates](
+    ..\static\infinity_trees\infinity_trees_with_coordinates.svg
+    "Everything that follows could possibly have been made a little nicer had I
+    not zero-indexed a."
+)
 
 
 
+<br><br>
 
 ## I Expect to be Wrong
 
-This is something that it looks like a lot of smart people have spent quite a
-while thinking about, and, it appears, all seem to agree on. So, I certainly
-expect to be wrong about this, but I do look forward to finding out where, and
-why.
+Despite the fact that this seems to make sense to me, this is also something
+that it looks like a lot of smart people have spent quite a while thinking
+about, and all seem to agree on. So, I certainly expect to be wrong about this.  
+
+<br>
+
+However, I do look forward to finding out where, and why. If you want to let me
+know, there are details just below.
