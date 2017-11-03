@@ -57,9 +57,9 @@ p {
 
 table {
     border-collapse: collapse;
-    margin: 5px 0;
+    margin: 5px auto;
     table-layout: fixed;
-    width: 100%;
+    width: 90%;
 }
 
 table, th, td {

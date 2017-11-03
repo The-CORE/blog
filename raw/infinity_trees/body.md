@@ -4,12 +4,12 @@ To begin, it is important to note one interesting thing about infinity: that
 there are different sizes of it. I am going to reference certain sets of
 numbers being the same size (integers, positive integers, negative integers,
 odd numbers, even numbers, rational numbers, etc. (I may also refer to sets of
-this size as countable)) and more importantly some perhaps not being the same
-size. The core idea about these sets being, or not being, the same size is
-quite simple though (at least to my understanding): if you can match one set up
-one for one with the other, without ever running out of either set, then they
-are the same size. If you can't match them one-to-one, then, the set that
-didn't 'run out' is larger.  
+this particular size as countable)) and more importantly some perhaps not being
+the same size. The core idea about these sets being, or not being, the same
+size is quite simple though (at least to my understanding): if you can match
+one set up one for one with the other, without ever running out of either set,
+then they are the same size. If you can't match them one-to-one, then, the set
+that didn't 'run out' is larger.  
 
 <br>
 
@@ -85,38 +85,40 @@ It goes something like this:
 
 <br>
 
-This argument certainly seems quite conclusive to me, but, is it enough?.
-Because, I think I have another way of looking at the real numbers that allows
-them to be 'counted', mapped one to one with the integers (or some other set of
-equivalent size), and (for reasons you will see below) I don't think that
-looking at them another way is necessarily an unreasonable way of going about
-doing this.
+This argument certainly seems quite conclusive, but is it enough? Because I
+think I have another way of looking at the real numbers that allows them to be
+'counted', mapped one to one with the integers (or some other set of equivalent
+size), and (for reasons you will see below) I don't think that looking at them
+another way is necessarily an unreasonable way of going about doing this.
 
 ## Intervals
 
 One of the first things to deal with is the fact that the argument above and my
 argument below simply deal with the real numbers within an interval (in both
-cases between zero and one). Now, in the case of the former it certainly seems
+cases between zero and one). In the case of the former it certainly seems
 fine, because proving there are more members in a subset of set $a$ than there
 are members in all of set $b$, means that there are more members in set $a$
-than there are in set $b$. But, with my contrarian case, it is not so clear.
-Even if I showed that I could map one to one all the integers to all the real
-numbers between zero and one, would that mean that I could map an integer to
-all the real numbers?
+than there are in set $b$. But with my contrarian case, it is not so clear if
+this would work. Even if I showed that I could map one to one all the integers
+to all the real numbers between zero and one, how could that mean that I could
+map  an integer to every real number?
 
 <br>
 
-And supposing that we could give every real number in a given interval a
+Now, supposing that we could give every real number in a given interval a
 corresponding positive integer (which we could do if we could map them to
 another set of the same size), what would that mean? Well, we could then create
 a set for the reals between every pair of adjacent integers (including the
 integer below, and not including the one above to make them tessellate nicely),
-and we would have a range that covered all the reals. And, as it turns out, we
-could actually map integers one-to-one with this, using the diagram below. We
-can place the positive integer index within each set across the axis at the
-top, and the integer that is the lower bound of the range across the axis on
-the left (covering the negatives by alternating, e.g. $[0, 1, -1, 2, -2, 3,
-...]$).   
+and we would have a range that covered all the reals.
+
+<br>
+
+As it turns out this is enough to do the mapping, using the diagram below. We
+can place the positive integer index for the reals in each set across the axis
+at the top, and the integer that is the lower bound of the range across the
+axis on the left (covering the negatives by alternating, e.g. $[0, 1, -1, 2,
+-2, 3, ...]$).   
 
 ![Grid counting diagram](
     ..\static\infinity_trees\grid_counting.svg
@@ -159,11 +161,11 @@ description of the diagonal argument, in binary, as infinite stings of
 digits. I was initially worried that this may not be an adequate description,
 as it may not, for instance, include irrational numbers (are infinite digits of
 $\pi$ actually equivalent to $\pi$?), and issues relating to this will come up
-[later](#the-issue-with-irrationals). But, as the definition I am using is
-basically the same as that used for the diagonal argument, even if it didn't
-fully encapsulate the reals, it seems to fully encapsulate some set that seems
-to contain more members than the set of integers, so, the question is
-interesting anyway.  
+[later](#the-issue-with-irrationals). But as the definition I am using is
+basically the same as that used for the diagonal argument, even if my
+definition didn't fully encapsulate the reals it seems to fully encapsulate
+some set that appears to contain more members than the set of integers, so the
+question is still interesting.  
 
 ### The Structure
 
@@ -175,7 +177,7 @@ interesting anyway.
 The arrangement that I believe allows the reals to be counted is the tree graph
 depicted above. Each node is a number (written in binary), and each number is
 connected to two other numbers below it, and, one above it. The two numbers
-below it are both itself, and a number a specific power of two (depending on
+below it are both itself and a number a specific power of two (depending on
 how far down the tree it is) greater than itself.  
 
 <br>
@@ -195,18 +197,18 @@ continue to subdivide the numbers.
 <br>
 
 Most importantly though: the diagram shows that each row can quite easily be
-counted. This tree halves reals between zero and one, over and over again, and
-goes on forever, but, as each row is clearly finite, you won't run out of
-integers to count with. As this tree never ends, every combination of digits
-that was expressed in the [diagonal argument](#the-diagonal-argument) should
-appear. This hand-waving argument seems fine to me, it seems to me that we can
-in fact list, or count, all of the real numbers, mapping them to integers just
-by counting along the rows.  
+counted. This tree halves reals between zero and one over and over again, and
+it goes on forever, but as each row is clearly finite, you will never run out
+of integers to count with. And as this tree never ends, it seems to me that
+every combination of digits expressed in the
+[diagonal argument](#the-diagonal-argument) should appear. This hand-waving
+argument seems to make sense to me, it seems to me that we can in fact list, or
+count, all of the real numbers, mapping them to integers just by counting along
+the rows.  
 
 <br>
 
-However, if we look into this a little further, we may see at least one
-particular issue arise.  
+However, there is at least one rather glaring issue.
 
 ### The issue with irrationals
 
@@ -224,38 +226,39 @@ Where are the irrationals?
 
 There is no one point on the tree that I can point to and say "there's $\pi$".
 And I can't work out if that means that this doesn't contain them, because the
-tree won't ever stop, and each row is finite, so, I won't ever run out of
+tree won't ever stop, and each row is finite, so I won't ever run out of
 integers to count with either.  
 
 <br>
 
-Additionally, if I was to write $pi$ out in binary, and round it to any
+Additionally, if I was to write $\pi$ out in binary, and round it to any
 precision, I would be able to find that value in the tree, and give it a
 corresponding number. And then I could go to the next digit, and the next
 digit, and the next, etc. So I think the question becomes: is infinitely
-approaching $\pi$ equivalent to $\pi$?  
+approaching $\pi$ equivalent to $\pi$? And would that even be enough if it
+was?  
 
 <br>
 
-I am not sure what the answer to this question is. If the answer is no, then
-this is just an inefficient way to show that we can match the rationals
-one-to-one with the integers. But I _feel_ like this _might_ not be the case
-(very dubious). You can create irrationals with infinite series that don't
-have more terms than there are integers, and the diagonal argument seems to
-imply that the numbers it deals with can have their digits mapped one-to-one
+I am not sure what the answers to these questions are. If the answers are no,
+then this is just an inefficient way to show that we can match the rationals
+one-to-one with the integers. But I (perhaps rather dubiously) _feel_ like this
+_might_ not be the case. You can create irrationals with infinite series that
+don't have more terms than there are integers, and the diagonal argument seems
+to imply that the numbers it deals with can have their digits mapped one-to-one
 with the positive integers.  
 
 <br>
 
 These things make it feel like while I can't tell you where on the tree an
-irrational is, that the tree extends as infinitely far into the reals as the
-irrationals do. But, I don't even know what that sentence really means.
+irrational is, that the tree extends 'as infinitely far into the reals as the
+irrationals do'. But I don't even know what that sentence really means.
 
-### Flattening the tree
+### Attempting to Flatten the Tree
 
 But, despite that potentially fatal wound, I would like to try to formalise
 this rather unwieldy tree into a function, that given an integer spits out a
-real (though, as mentioned above, no particular integer will be able to coax
+real (though, as mentioned above, no particular integer will be able to coax it
 into spitting out an irrational).  
 
 So, what do we want? We want some function, lets call it $s(n)$, that takes an
@@ -264,17 +267,60 @@ integer and gives back a real.
 <br>
 
 So, if we just let $n$ correspond to counting across one row, and then across
-the next row down, and then across the next row down, and so one, we can start
+the next row down, and then across the next row down, and so on, we can start
 to write out what this function must look like, reading off the tree.  
 
 <br>
 
-| $n$    | $0$ | $1$ | $2$   | $3$ | $4$ | $5$ | $6$ | $7$ | $8$ | $...$ |
-|:------:| ---:| ---:| -----:| ---:| ---:| ---:| ---:| ---:| ---:|:-----:|
-| $s(n)$ | $0$ | $0$ | $0.1$ |     |     |     |     |     |     | $...$ |
+| $n$    | $0$ | $1$ | $2$   | $3$  | $4$  | $5$  | $6$  | $7$   | $...$ |
+|:------:| ---:| ---:| -----:| ----:| ----:| ----:| ----:| -----:|:-----:|
+| $s(n)$ | $0$ | $0$ | $0.1$ | 0.00 | 0.01 | 0.10 | 0.11 | 0.000 | $...$ |
 
 <br>
 
+So what is actually happening here? Well, we can break it down into a few
+different parts and name them (after all, names give power). I am going to
+leave $0$ as a special case, and just look at the rest of the tree.  
+
+<br>
+
+For any particular node on the tree, we know that it is either equal to, or a
+particular power of $2$ greater than the node above it. But, this $n$ based
+numbering system has no notion of the tree, so let's just say that each node
+refers to some other node, a distance $d(n)$ behind it.
+
+<br>
+
+We can also see from the table and the tree that (other than for $n=0$) it is
+when $n$ is even that the (negative) power of $2$ is added, so let's call a
+function that returns $1$ is $n$ is even and $0$ is $n$ is odd $e(n)$. Also
+let's call the negative (so a positive number) of the power of the power of $2$
+added $p(n)$.  
+
+$$ \therefore s(n) = s(n - d(n)) + e(n)2^{-p(n)} $$
+
+As I said, names give power.  
+
+<br>
+
+So, now let's look at the table and the tree again to try to find these values,
+to see how far it goes back each time, to see what the power of $2$ added is,
+and to see when it is even.
+
+<br>
+
+| $n$    | $0$ | $1$ | $2$   | $3$  | $4$  | $5$  | $6$  | $7$   | $...$ |
+|:------:| ---:| ---:| -----:| ----:| ----:| ----:| ----:| -----:|:-----:|
+| $s(n)$ | $0$ | $0$ | $0.1$ | 0.00 | 0.01 | 0.10 | 0.11 | 0.000 | $...$ |
+| $d(n)$ |     | $1$ |   $2$ |  $2$ |  $3$ |  $3$ |  $4$ |   $4$ | $...$ |
+| $e(n)$ | $1$ | $0$ |   $1$ |  $0$ |  $1$ |  $0$ |  $1$ |   $0$ | $...$ |
+| $p(n)$ |     | $1$ |   $1$ |  $2$ |  $2$ |  $2$ |  $2$ |   $3$ | $...$ |
+
+<br>
+
+Stuff.
+
+### Going backwards
 
 $$ \left \lceil{\frac{5}{2}}\right \rceil = 3$$
 
@@ -289,5 +335,5 @@ serious problem with it. So, I certainly expect to be wrong about this.
 
 <br>
 
-However, I do look forward to finding out where, and why. And if you want to
-let me know, there are details just below.
+However, I do look forward to finding out where, and why. And so, if you want
+to let me know, there are contact details just below.
