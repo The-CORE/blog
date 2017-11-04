@@ -67,6 +67,10 @@ table, th, td {
     padding: 10px;
 }
 
+.scroll-box {
+    overflow-x: auto;
+}
+
 .home-link {
     display: inline-block;
     float: left;
@@ -100,7 +104,7 @@ table, th, td {
 
 .read-more-container {
     margin: 10px auto 0 auto;
-    width: 80%;
+    width: 75%;
 }
 
 .content img {
@@ -128,7 +132,7 @@ table, th, td {
     padding: 20px;
     border-radius: 10px;
     background-color: rgb(0, 55, 200);
-    width: 80%;
+    width: 75%;
 }
 
 .post-body {
@@ -136,7 +140,7 @@ table, th, td {
     padding: 20px;
     border-radius: 10px;
     background-color: rgb(33, 37, 48);
-    width: 80%;
+    width: 75%;
 }
 
 .footer {
@@ -150,14 +154,38 @@ table, th, td {
     margin-top: 20px;
 }
 
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1332px) {
     .post-body {
-        width: 1080px;
+        width: 999px;
     }
     .abstract {
-        width: 1080px;
+        width: 999px;
     }
     .read-more-container {
-        width: 1080px;
+        width: 999px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .post-body {
+        width: 90%;
+    }
+    .abstract {
+        width: 90%;
+    }
+    .read-more-container {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px){
+    .post-body {
+        width: 450px;
+    }
+    .abstract {
+        width: 450px;
+    }
+    .read-more-container {
+        width: 450px;
     }
 }

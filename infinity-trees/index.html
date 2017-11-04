@@ -31,7 +31,7 @@
             ARCHIVE
         </a>
         <div class='header'>
-            <a href='http://wrightwhy.com' target='_blank'>
+            <a href='/' target='_blank'>
                 <img
                     src='../static/question_mark.svg'
                     class='logo'
@@ -40,7 +40,7 @@
         </div>
         <div class='content'>
             <h1 class='title'>Infinity Trees</h1>
-<div class='time'>2017.77140044828+0.0012557077625</div>
+<div class='time'>2017.84551345839+0.0012557077625</div>
 <div class='abstract'>
     <h2 id="how-many-numbers-are-there-between-zero-and-one">How many numbers are there between zero and one?</h2>
 <p>Well, quite a few more than there are integers apparently. Uncountably many.
@@ -79,7 +79,7 @@ that didn't 'run out' is larger.  </p>
 integer ($1$ goes with $2$, $2$ goes with $4$, $3$ goes with...), and you will
 never run out of either. And, as you will see, the argument for there being
 more numbers between zero and one that I will focus on centres around not
-being able to do this one-to-one mapping. So, without further ado, lets get
+being able to do this one-to-one mapping. So, without further ado, let's get
 onto that.  </p>
 <h2 id="the-diagonal-argument">The Diagonal Argument</h2>
 <p>A typical argument given for there being more numbers between zero and one is a
@@ -153,16 +153,16 @@ cases between zero and one). In the case of the former it certainly seems
 fine, because proving there are more members in a subset of set $a$ than there
 are members in all of set $b$, means that there are more members in set $a$
 than there are in set $b$. But with my contrarian case, it is not so clear if
-this would work. Even if I showed that I could map one to one all the integers
-to all the real numbers between zero and one, how could that mean that I could
-map  an integer to every real number?</p>
+this would work. And even if I showed that I could map one to one all the
+integers to all the real numbers between zero and one, how could that mean that
+I could map an integer to every real number?</p>
 <p><br></p>
-<p>Now, supposing that we could give every real number in a given interval a
+<p>Well, supposing that we could give every real number in a given interval a
 corresponding positive integer (which we could do if we could map them to
-another set of the same size), what would that mean? Well, we could then create
-a set for the reals between every pair of adjacent integers (including the
-integer below, and not including the one above to make them tessellate nicely),
-and we would have a range that covered all the reals.</p>
+another set of the same size), we could then create a set for the reals between
+every pair of adjacent integers (including the integer below, and not including
+the one above to make them tessellate nicely), and we would have a range that
+covered all the reals.</p>
 <p><br></p>
 <p>As it turns out this is enough to do the mapping, using the diagram below. We
 can place the positive integer index for the reals in each set across the axis
@@ -173,7 +173,7 @@ axis on the left (covering the negatives by alternating, e.g. $[0, 1, -1, 2,
 <p>Now, after that, we are left with an integer grid, extending off both right and
 down forever, with as many coordinates on each axis as there are integers. We
 clearly can't count it by counting rows or columns, as we could never finish
-them, there are as many in each as we have integers to count with. But we can
+them (there are as many in each as we have integers to count with). But we can
 still count it. We can count the diagonals as given by the numbers in the
 squares. Each diagonal is of finite length, so, we will always finish all of
 them, and we will never run out of integers.  </p>
@@ -207,12 +207,12 @@ question is still interesting.  </p>
 <p>The arrangement that I believe allows the reals to be counted is the tree graph
 depicted above. Each node is a number (written in binary), and each number is
 connected to two other numbers below it, and, one above it. The two numbers
-below it are both itself and a number a specific power of two (depending on
+below it are both itself and a number a specific power of $2$ (depending on
 how far down the tree it is) greater than itself.  </p>
 <p><br></p>
 <p>All of the numbers represent unending decimals, but, some of the trailing zeros
 (and only zeros) have been removed for simplicity. The number of significant
-figures displayed is to represent the relevant power of two to be changed at
+figures displayed is to represent the relevant power of $2$ to be changed at
 that particular depth down the tree.  </p>
 <p><br></p>
 <p>Also, you may have noticed the duplicates. Each number appearing infinitely
@@ -232,8 +232,8 @@ the rows.  </p>
 <p><br></p>
 <p>However, there is at least one rather glaring issue.</p>
 <h3 id="the-issue-with-irrationals">The issue with irrationals</h3>
-<p>While I will go into the details of actually making a set out of the tree
-below, one thing is easier to see when looking at the tree itself.  </p>
+<p>While I will go into the details of actually making a function out of the tree
+later, one thing at least is easy to see when looking at the tree itself.  </p>
 <p><img alt="Infinity trees diagram" src="..\static\infinity_trees\infinity_trees.svg" title="If you are still waiting for the duplicates thing. You missed it." /></p>
 <p>Where are the irrationals?  </p>
 <p><br></p>
@@ -245,7 +245,7 @@ integers to count with either.  </p>
 <p>Additionally, if I was to write $\pi$ out in binary, and round it to any
 precision, I would be able to find that value in the tree, and give it a
 corresponding number. And then I could go to the next digit, and the next
-digit, and the next, etc. So I think the question becomes: is infinitely
+digit, and the next, etc. So, I think the question becomes: is infinitely
 approaching $\pi$ equivalent to $\pi$? And would that even be enough if it
 was?  </p>
 <p><br></p>
@@ -265,12 +265,13 @@ irrationals do'. But I don't even know what that sentence really means.</p>
 this rather unwieldy tree into a function, that given an integer spits out a
 real (though, as mentioned above, no particular integer will be able to coax it
 into spitting out an irrational).  </p>
-<p>So, what do we want? We want some function, lets call it $s(n)$, that takes an
+<p>So, what do we want? We want some function, let's call it $s(n)$, that takes an
 integer and gives back a real.  </p>
 <p><br></p>
-<p>So, if we just let $n$ correspond to counting across one row, and then across
-the next row down, and then across the next row down, and so on, we can start
-to write out what this function must look like, reading off the tree.  </p>
+<p>So, if we just let $n$ correspond to counting across one row (starting with
+zero), and then across the next row down, and then across the next row down,
+and so on, we can start to write out what this function must look like, reading
+off the tree.  </p>
 <p><br></p>
 <table>
 <thead>
@@ -293,31 +294,40 @@ to write out what this function must look like, reading off the tree.  </p>
 <td align="right">$0$</td>
 <td align="right">$0$</td>
 <td align="right">$0.1$</td>
-<td align="right">0.00</td>
-<td align="right">0.01</td>
-<td align="right">0.10</td>
-<td align="right">0.11</td>
-<td align="right">0.000</td>
+<td align="right">$0.00$</td>
+<td align="right">$0.01$</td>
+<td align="right">$0.10$</td>
+<td align="right">$0.11$</td>
+<td align="right">$0.000$</td>
 <td align="center">$...$</td>
 </tr>
 </tbody>
 </table>
 <p><br></p>
-<p>So what is actually happening here? Well, we can break it down into a few
+<p>So, what is actually happening here? Well, we can break it down into a few
 different parts and name them (after all, names give power). I am going to
-leave $0$ as a special case, and just look at the rest of the tree.  </p>
+leave the first $0$ as a special case, and just look at the rest of the tree.  </p>
 <p><br></p>
-<p>For any particular node on the tree, we know that it is either equal to, or a
-particular power of $2$ greater than the node above it. But, this $n$ based
-numbering system has no notion of the tree, so let's just say that each node
-refers to some other node, a distance $d(n)$ behind it.</p>
+<p>For any particular node on the tree, we know that it is either equal to the
+node above it, or a particular power of $2$ greater than the node above it.
+But, this $n$ based numbering system has no notion of the tree, so let's just
+say that each node refers to some other node, a distance $d(n)$ behind it.</p>
 <p><br></p>
 <p>We can also see from the table and the tree that (other than for $n=0$) it is
 when $n$ is even that the (negative) power of $2$ is added, so let's call a
-function that returns $1$ is $n$ is even and $0$ is $n$ is odd $e(n)$. Also
+function that returns $1$ is $n$ is even and $0$ is $n$ is odd $e(n)$. Also,
 let's call the negative (so a positive number) of the power of the power of $2$
 added $p(n)$.  </p>
-<p>$$ \therefore s(n) = s(n - d(n)) + e(n)2^{-p(n)} $$</p>
+<div class='scroll-box'>
+$$
+\therefore s(n) =
+\begin{cases}
+0  & \text{if $n=0$} \\\
+s(n - d(n)) + e(n)2^{-p(n)} & \text{if $n\neq0$}
+\end{cases}
+$$
+</div>
+
 <p>As I said, names give power.  </p>
 <p><br></p>
 <p>So, now let's look at the table and the tree again to try to find these values,
@@ -328,7 +338,6 @@ and to see when it is even.</p>
 <thead>
 <tr>
 <th align="center">$n$</th>
-<th align="right">$0$</th>
 <th align="right">$1$</th>
 <th align="right">$2$</th>
 <th align="right">$3$</th>
@@ -343,18 +352,16 @@ and to see when it is even.</p>
 <tr>
 <td align="center">$s(n)$</td>
 <td align="right">$0$</td>
-<td align="right">$0$</td>
 <td align="right">$0.1$</td>
-<td align="right">0.00</td>
-<td align="right">0.01</td>
-<td align="right">0.10</td>
-<td align="right">0.11</td>
-<td align="right">0.000</td>
+<td align="right">$0.00$</td>
+<td align="right">$0.01$</td>
+<td align="right">$0.10$</td>
+<td align="right">$0.11$</td>
+<td align="right">$0.000$</td>
 <td align="center">$...$</td>
 </tr>
 <tr>
 <td align="center">$d(n)$</td>
-<td align="right"></td>
 <td align="right">$1$</td>
 <td align="right">$2$</td>
 <td align="right">$2$</td>
@@ -366,7 +373,6 @@ and to see when it is even.</p>
 </tr>
 <tr>
 <td align="center">$e(n)$</td>
-<td align="right">$1$</td>
 <td align="right">$0$</td>
 <td align="right">$1$</td>
 <td align="right">$0$</td>
@@ -378,7 +384,6 @@ and to see when it is even.</p>
 </tr>
 <tr>
 <td align="center">$p(n)$</td>
-<td align="right"></td>
 <td align="right">$1$</td>
 <td align="right">$1$</td>
 <td align="right">$2$</td>
@@ -391,14 +396,126 @@ and to see when it is even.</p>
 </tbody>
 </table>
 <p><br></p>
-<p>Stuff.</p>
-<h3 id="going-backwards">Going backwards</h3>
-<p>$$ \left \lceil{\frac{5}{2}}\right \rceil = 3$$</p>
-<p><br><br></p>
-<h2 id="i-expect-to-be-wrong">I Expect to be Wrong</h2>
+<p>So now we can start building this up, thinking about what each of these things
+actually are. The easiest to define is possibly $e(n)$. $1$ if $n$ is even, $0$
+if $n$ is odd. But how can we actually do this? What do we have mathematically
+that depends on numbers being even or odd? Well, the power you raise $-1$ to
+works, it is $-1$ if $n$ is odd, and $+1$ if $n$ is even. Add $1$ to that, and
+divide that all by $2$, and we have what we want.</p>
+<p>$$ \therefore e(n) = \frac{(-1)^n + 1}{2} $$</p>
+<p>Now, before we get onto the next two, we are going to need <a
+href='https://en.wikipedia.org/wiki/Floor_and_ceiling_functions'
+target='_blank_'>floor and ceiling functions</a>. All you need to know is that
+$floor(x) = \lfloor{x}\rfloor$ and that is the largest integer that is smaller
+than or equal to $x$, and $ceiling(x) = \lceil{x}\rceil$ and that is the
+smallest integer that is greater than or equal to $x$.</p>
+<p><br></p>
+<p>The next most straight forward component of $s(n)$ is probably $d(n)$. Looking
+at the table (and the tree if you want), we can see that each node has the
+distance it needs to refer back increased by $1$ for each position across a row
+we move (as it gets further away from what it is referring to), but also
+reduced by $1$ if it is a left-hand node (as the position of what it is
+referring to gets closer). As such we know that $d(n)$ start at $1$, and
+increases every second $n$, with the first increase at $n=2$. With a little
+playing around we can see that...</p>
+<p>$$ \therefore d(n) = \left\lfloor{\frac{n}{2}}\right\rfloor + 1 $$</p>
+<p>And now we only have one component left to find, $p(n)$.</p>
+<p><br></p>
+<p>If we look at the table, and particularly if we were to extend it further we
+can / would see that the values of $p(n)$ are grouped in groups of the same value
+which are each of a length double as long as the last. This is also intuitive
+from the tree: the power of $2$ that may be added to a node is the same across
+each row, and each row is double as long as the last one. We can also look at
+the places at which $p(n)$ changes, being $1$, $3$, and $7$, as far as the
+table extends. And one thing we can notice about these, is that they are all
+$1$ less than a power of $2$. This means that if I take the ceiling of the
+power of $2$ needed to get $n+2$ ($n+2$ because otherwise the ceiling would
+leave the beginnings of each group in the previous group), the changes will
+happen in the same place as the changes to $p(n)$.</p>
+<p><br></p>
+<p>So, if we let $f(n) = \left \lceil {\log_2{n + 2}} \right \rceil$ then:</p>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th align="center">$n$</th>
+<th align="right">$1$</th>
+<th align="right">$2$</th>
+<th align="right">$3$</th>
+<th align="right">$4$</th>
+<th align="right">$5$</th>
+<th align="right">$6$</th>
+<th align="right">$7$</th>
+<th align="right">$8$</th>
+<th align="right">$9$</th>
+<th align="right">$10$</th>
+<th align="center">$...$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">$f(n)$</td>
+<td align="right">$2$</td>
+<td align="right">$2$</td>
+<td align="right">$3$</td>
+<td align="right">$3$</td>
+<td align="right">$3$</td>
+<td align="right">$3$</td>
+<td align="right">$4$</td>
+<td align="right">$4$</td>
+<td align="right">$4$</td>
+<td align="right">$4$</td>
+<td align="center">$...$</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>And conveniently, we can now see that that is just exactly one more than what
+we want for $p(n)$.</p>
+<p>$$ \therefore p(n) = \left \lceil {\log_2{n + 2}} \right \rceil - 1 $$</p>
+<p><br></p>
+<p>So, now we have...</p>
+<div class='scroll-box'>
+$$
+\therefore s(n) =
+\begin{cases}
+0  & \text{if $n=0$} \\\
+s(n - d(n)) + e(n)2^{-p(n)} & \text{if $n\neq0$}
+\end{cases}
+$$
+</div>
+
+<p>$$ d(n) = \left \lfloor {\frac{n}{2}} \right \rfloor + 1 $$
+$$ e(n) = \frac{(-1)^n + 1}{2} $$
+$$ p(n) = \left \lceil {\log_2{n + 2}} \right \rceil - 1 $$
+So...
+<div class='scroll-box'>
+$$
+\therefore s(n) =
+\begin{cases}
+0  &amp; \text{if $n=0$} \\
+s(n - (\left \lfloor {\frac{n}{2}} \right \rfloor + 1)) + \frac{(-1)^n + 1}{2}
+\times 2^{\left \lceil {\log_2{n + 2}} \right \rceil - 1)} &amp; \text{if $n\neq0$}
+\end{cases}
+$$
+</div></p>
+<p>And there it is. That is the function that I <em>feel</em> may be able to map every
+integer to every real. <em>Maybe</em>. A functional representation of the infinity
+tree. Unfortunately though it is only one way. It only goes from non-negative
+integers to reals, not the other way around. This argument would be much more
+conclusive if it could go the other way. As such, this whole thing has really
+just left me confused more than anything, and I feel like I may have come out
+of it understanding cardinality even less than I did coming in. Which is saying
+something.</p>
+<h2 id="non-conclusive-conclusion">Non-conclusive Conclusion</h2>
+<p>There is certainly more to be said on this, even if it is to only point out
+some fatally flawed assumption that brings the whole thing crushing down, but
+this is all I have done at the moment and is about as far as I can see how to
+take it.</p>
+<h3 id="i-expect-to-be-wrong">I Expect to be Wrong</h3>
 <p>Despite the fact that this seems to make sense to me, this is also something
 that it looks like a lot of smart people have spent quite a while thinking
-about, and all seem to agree on, and even I can see at least one potentially
+about, and all seem to agree on. Even <em>I</em> can see at least one potentially
 serious problem with it. So, I certainly expect to be wrong about this.  </p>
 <p><br></p>
 <p>However, I do look forward to finding out where, and why. And so, if you want

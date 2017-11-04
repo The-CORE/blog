@@ -27,8 +27,8 @@ OUTPUT_DIRECTORY = ROOT
 NUMBER_OF_POSTS_ON_INDEX = 5
 HOME_TITLE = 'Right. Why?'
 HOME_ABSTRACT = 'Just some words about some things. A blog by James Wright, \
-    an always Wright, but also often wrong, member of the species \
-    homo-sapiens, who happens to call Sol 3 home.'
+    an often wrong member of the species homo-sapiens, who happens to call \
+    Sol 3 home.'
 MATHJAX_SCRIPTS = '''
     <script type='text/x-mathjax-config'>
         MathJax.Hub.Config(
