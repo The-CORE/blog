@@ -46,6 +46,9 @@ POST_STATIC_DIRECTORY = '../static'
 # The above to variables are not for file paths, but web links, so, don't need
 # to be joined with os.path.join.
 EXTENSIONS = ['markdown.extensions.toc', 'markdown.extensions.tables']
+# If a folder in RAW_DATA_DIRECTORY begins with the below value, a post will
+# not be built from it.
+IGNORE_DIRECTORY_INDICATION_CHARACTER = '_'
 
 
 def build():
@@ -63,6 +66,9 @@ def _get_posts():
     posts = []
 
     for folder in os.listdir(RAW_DATA_DIRECTORY):
+        if folder[0] == IGNORE_DIRECTORY_INDICATION_CHARACTER:
+            continue
+
         folder_directory = os.path.join(RAW_DATA_DIRECTORY, folder)
 
         data_directory = os.path.join(folder_directory, DATA_FILE_NAME)
