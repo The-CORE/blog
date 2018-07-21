@@ -110,7 +110,7 @@ def _get_posts():
                 'abstract_html': abstract_html,
                 'body_html': body_html,
                 'requires_maths_scripts': requires_maths_scripts,
-                'requires_maths_scripts_for_abstract': \
+                'requires_maths_scripts_for_abstract':
                     requires_maths_scripts_for_abstract
             }
         )
@@ -135,8 +135,9 @@ def build_pages(posts):
             whole_post = template_file.read().format(
                 title=post['post_name'] + ' | ',
                 static_directory=POST_STATIC_DIRECTORY,
-                extra_scripts=MATHJAX_SCRIPTS if \
-                    post['requires_maths_scripts'] else '',
+                extra_scripts=(
+                    MATHJAX_SCRIPTS if post['requires_maths_scripts'] else ''
+                ),
                 content=post_content
             )
 
@@ -163,8 +164,9 @@ def build_index(posts):
 
     truncated_posts_html = ''
     requires_maths_scripts_for_abstract = False
-    for post in sorted(posts, key=lambda post: post['post_time'], \
-            reverse=True)[:NUMBER_OF_POSTS_ON_INDEX]:
+    for post in sorted(
+            posts, key=lambda post: post['post_time'], reverse=True
+    )[:NUMBER_OF_POSTS_ON_INDEX]:
         truncated_posts_html += truncated_post_template.format(
             link=post['post_name'].lower().replace(' ', '-'),
             title=post['post_name'],
@@ -183,8 +185,9 @@ def build_index(posts):
     whole_index = page_template.format(
         title='',
         static_directory=INDEX_STATIC_DIRECTORY,
-        extra_scripts=MATHJAX_SCRIPTS if requires_maths_scripts_for_abstract \
-            else '',
+        extra_scripts=(
+            MATHJAX_SCRIPTS if requires_maths_scripts_for_abstract else ''
+        ),
         content=index_content
     )
 
@@ -207,7 +210,9 @@ def build_archive(posts):
 
     truncated_posts_html = ''
     requires_maths_scripts_for_abstract = False
-    for post in sorted(posts, key=lambda post: post['post_time'], reverse=True):
+    for post in sorted(
+            posts, key=lambda post: post['post_time'], reverse=True
+    ):
         truncated_posts_html += truncated_post_template.format(
             link=post['post_name'].lower().replace(' ', '-'),
             title=post['post_name'],
@@ -220,8 +225,9 @@ def build_archive(posts):
     whole_archive = page_template.format(
         title='ARCHIVE | ',
         static_directory=INDEX_STATIC_DIRECTORY,
-        extra_scripts=MATHJAX_SCRIPTS if requires_maths_scripts_for_abstract \
-            else '',
+        extra_scripts=(
+            MATHJAX_SCRIPTS if requires_maths_scripts_for_abstract else ''
+        ),
         content=truncated_posts_html
     )
 
@@ -238,9 +244,9 @@ def decimal_time():
     Gets the current time as a decimal of the year.
     """
     now = datetime.now()
-    year, month, day, hour, minute, second, microsecond = now.year, now.month, \
-        now.day, now.hour, now.minute, now.second, now.microsecond
-    is_leap_year = year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+    is_leap_year = (
+        now.year % 4 == 0 and (now.year % 100 != 0 or now.year % 400 == 0)
+    )
     days_in_months = [
         None,
         31,
@@ -257,17 +263,19 @@ def decimal_time():
         31
     ]
 
-    # 24 * 60 * 60 * 1000000 = 86400000000
-    # Also below is just for show really.
+    # 24 * 60 * 60 * 1000000 = 86400000000.
+    # Also below is just for show really, to make clear what is happening.
     microseconds_in_this_year = (366 if is_leap_year else 365) * 86400000000
-    days_into_this_year = day + sum(days_in_months[1:month])
+    days_into_this_year = now.day + sum(days_in_months[1:now.month])
     hours_into_this_year = days_into_this_year * 24 + hour
-    minutes_into_this_year = hours_into_this_year * 60 + minute
-    seconds_into_this_year = minutes_into_this_year * 60 + second
-    microseconds_into_this_year = seconds_into_this_year * 1000000 + microsecond
+    minutes_into_this_year = hours_into_this_year * 60 + now.minute
+    seconds_into_this_year = minutes_into_this_year * 60 + now.second
+    microseconds_into_this_year = (
+        seconds_into_this_year * 1000000 + now.microsecond
+    )
 
     time_string = str(
-        year + microseconds_into_this_year / microseconds_in_this_year
+        now.year + microseconds_into_this_year / microseconds_in_this_year
     )
 
     # Offsets due to timezone.
