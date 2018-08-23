@@ -2,6 +2,7 @@ import os
 import json
 import markdown
 import time
+import AdvancedHTMLParser
 from datetime import datetime
 
 
@@ -32,8 +33,8 @@ HOME_ABSTRACT = 'Just some words about some things. A blog by James Wright, \
 MATHJAX_SCRIPTS = '''
     <script type='text/x-mathjax-config'>
         MathJax.Hub.Config(
-            {tex2jax: {inlineMath: [['$','$']]}, showMathMenu: false}
-        );
+            {tex2jax: {inlineMath: [['$', '$']]}, showMathMenu: false}
+        )
     </script>
     <script
         type='text/javascript'
@@ -77,41 +78,49 @@ def _get_posts():
 
         with open(data_directory) as post_data_json_file:
             post_data = json.load(post_data_json_file)
-            post_name = post_data['name']
-            post_is_new = post_data['is_new']
-            post_time = decimal_time() if post_is_new else post_data['time']
-            requires_maths_scripts = post_data['requires_maths_scripts']
-            requires_maths_scripts_for_abstract = post_data[
-                'requires_maths_scripts_for_abstract'
-            ]
+            if post_data['should_update_time']:
+                post_time = decimal_time()
+            else:
+                post_time = post_data['time']
 
-        if post_is_new:
+        if post_data['should_update_time']:
             with open(data_directory, 'w') as post_data_json_file:
-                post_data['is_new'] = False
+                post_data['should_update_time'] = False
                 post_data['time'] = post_time
                 json.dump(post_data, post_data_json_file)
 
         markdown_with_extensions = markdown.Markdown(extensions=EXTENSIONS)
 
-        with open(abstract_directory) as abstract_markdown_file:
-            abstract_html = markdown_with_extensions.convert(
-                abstract_markdown_file.read()
-            )
-
-        with open(body_directory) as body_markdown_file:
-            body_html = markdown_with_extensions.convert(
-                body_markdown_file.read()
-            )
+        abstract_and_body_html_strings = []
+        for directory in abstract_directory, body_directory:
+            with open(directory) as markdown_file:
+                html_string = markdown_with_extensions.convert(
+                    markdown_file.read()
+                )
+            parser = AdvancedHTMLParser.AdvancedHTMLParser()
+            # Place everything inside a top level element such that we can
+            # remove children.
+            container_id = 'container'
+            parser.parseStr(f'<div id="{container_id}">{html_string}</div>')
+            container = parser.getElementById(container_id)
+            # Wrap tables in table containers
+            for table in parser.getElementsByTagName('table'):
+                table_container = parser.createElement('div')
+                table_container.addClass('table-container')
+                table_container.appendChild(table)
+                container.insertBefore(table_container, table)
+                container.removeChild(table)
+            abstract_and_body_html_strings.append(container.innerHTML)
 
         posts.append(
             {
-                'post_name': post_name,
+                'post_name': post_data['name'],
                 'post_time': post_time,
-                'abstract_html': abstract_html,
-                'body_html': body_html,
-                'requires_maths_scripts': requires_maths_scripts,
+                'abstract_html': abstract_and_body_html_strings[0],
+                'body_html': abstract_and_body_html_strings[1],
+                'requires_maths_scripts': post_data['requires_maths_scripts'],
                 'requires_maths_scripts_for_abstract':
-                    requires_maths_scripts_for_abstract
+                    post_data['requires_maths_scripts_for_abstract']
             }
         )
 

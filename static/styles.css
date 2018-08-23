@@ -15,7 +15,7 @@ body {
     background-color: black;
     background-image: url("background.jpg");
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100vh 100vh;
     min-width: 320px;
 }
 
@@ -59,9 +59,6 @@ p {
 table {
     border-collapse: collapse;
     margin: 5px auto;
-    table-layout: fixed;
-    width: 90%;
-    min-width: 300px;
 }
 
 table, th, td {
@@ -69,8 +66,9 @@ table, th, td {
     padding: 10px;
 }
 
-.scroll-box {
+.table-container {
     overflow-x: auto;
+    width: 100%;
 }
 
 .home-link {
