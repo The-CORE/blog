@@ -11,8 +11,6 @@ one set up one for one with the other, without ever running out of either set,
 then they are the same size. If you can't match them one-to-one, then, the set
 that didn't 'run out' is larger.  
 
-<br>
-
 For example, you can match all the positive integers up with a positive even
 integer ($1$ goes with $2$, $2$ goes with $4$, $3$ goes with...), and you will
 never run out of either. And, as you will see, the argument for there being
@@ -32,11 +30,7 @@ Numberphile</a>, and <a href='https://www.youtube.com/watch?v=s86-Z-CbaHA'
 target='_blank_'>Vsauce</a>, but below I shall attempt to describe a simplified
 (and slightly modified to my specific case) version of the argument as well.
 
-<br>
-
 It goes something like this:
-
-<br>
 
 > Let $s$ be the set of all real numbers between zero and one.  
 > For each of the positive integers, pick a random member of $s$, and never
@@ -81,9 +75,7 @@ It goes something like this:
 > <br>
 > And therefore, as there are the same number of integers as there are
 > positive integers, there are more numbers between zero and one, than there
-> are integers.  
-
-<br>
+> are integers.
 
 This argument certainly seems quite conclusive, but is it enough? Because I
 think I have another way of looking at the real numbers that allows them to be
@@ -103,16 +95,12 @@ this would work. And even if I showed that I could map one to one all the
 integers to all the real numbers between zero and one, how could that mean that
 I could map an integer to every real number?
 
-<br>
-
 Well, supposing that we could give every real number in a given interval a
 corresponding positive integer (which we could do if we could map them to
 another set of the same size), we could then create a set for the reals between
 every pair of adjacent integers (including the integer below, and not including
 the one above to make them tessellate nicely), and we would have a range that
 covered all the reals.
-
-<br>
 
 As it turns out this is enough to do the mapping, using the diagram below. We
 can place the positive integer index for the reals in each set across the axis
@@ -132,16 +120,12 @@ clearly can't count it by counting rows or columns, as we could never finish
 them (there are as many in each as we have integers to count with). But we can
 still count it. We can count the diagonals as given by the numbers in the
 squares. Each diagonal is of finite length, so, we will always finish all of
-them, and we will never run out of integers.  
-
-<br>
+them, and we will never run out of integers.
 
 I should probably say that I got this idea from the <a
 href='https://www.youtube.com/watch?v=elvOZm0d4H0' target='_blank_'>
 Numberphile video</a> that I referenced at the top of the post, though it was
-used for the positive rationals there.  
-
-<br>
+used for the positive rationals there.
 
 There is an additional benefit to considering this. It reveals that the way we
 arrange the numbers influences our ability to count them. Simply 'looking' at a
@@ -178,23 +162,17 @@ The arrangement that I believe allows the reals to be counted is the tree graph
 depicted above. Each node is a number (written in binary), and each number is
 connected to two other numbers below it, and, one above it. The two numbers
 below it are both itself and a number a specific power of $2$ (depending on
-how far down the tree it is) greater than itself.  
-
-<br>
+how far down the tree it is) greater than itself.
 
 All of the numbers represent unending decimals, but, some of the trailing zeros
 (and only zeros) have been removed for simplicity. The number of significant
 figures displayed is to represent the relevant power of $2$ to be changed at
-that particular depth down the tree.  
-
-<br>
+that particular depth down the tree.
 
 Also, you may have noticed the duplicates. Each number appearing infinitely
 many times in fact, with every left branch of the tree being the number above
 it. While this may be a strange way of counting something, it was necessary to
-continue to subdivide the numbers.  
-
-<br>
+continue to subdivide the numbers.
 
 Most importantly though: the diagram shows that each row can quite easily be
 counted. This tree halves reals between zero and one over and over again, and
@@ -204,9 +182,7 @@ every combination of digits expressed in the
 [diagonal argument](#the-diagonal-argument) should appear. This hand-waving
 argument seems to make sense to me, it seems to me that we can in fact list, or
 count, all of the real numbers, mapping them to integers just by counting along
-the rows.  
-
-<br>
+the rows.
 
 However, there is at least one rather glaring issue.
 
@@ -220,25 +196,19 @@ later, one thing at least is easy to see when looking at the tree itself.
     "If you are still waiting for the duplicates thing. You missed it."
 )
 
-Where are the irrationals?  
-
-<br>
+Where are the irrationals?
 
 There is no one point on the tree that I can point to and say "there's $\pi$".
 And I can't work out if that means that this doesn't contain them, because the
 tree won't ever stop, and each row is finite, so I won't ever run out of
-integers to count with either.  
-
-<br>
+integers to count with either.
 
 Additionally, if I was to write $\pi$ out in binary, and round it to any
 precision, I would be able to find that value in the tree, and give it a
 corresponding number. And then I could go to the next digit, and the next
 digit, and the next, etc. So, I think the question becomes: is infinitely
 approaching $\pi$ equivalent to $\pi$? And would that even be enough if it
-was?  
-
-<br>
+was?
 
 I am not sure what the answers to these questions are. If the answers are no,
 then this is just an inefficient way to show that we can match the rationals
@@ -246,9 +216,7 @@ one-to-one with the integers. But I (perhaps rather dubiously) _feel_ like this
 _might_ not be the case. You can create irrationals with infinite series that
 don't have more terms than there are integers, and the diagonal argument seems
 to imply that the numbers it deals with can have their digits mapped one-to-one
-with the positive integers.  
-
-<br>
+with the positive integers.
 
 These things make it feel like while I can't tell you where on the tree an
 irrational is, that the tree extends 'as infinitely far into the reals as the
@@ -262,35 +230,25 @@ real (though, as mentioned above, no particular integer will be able to coax it
 into spitting out an irrational).  
 
 So, what do we want? We want some function, let's call it $s(n)$, that takes an
-integer and gives back a real.  
-
-<br>
+integer and gives back a real.
 
 So, if we just let $n$ correspond to counting across one row (starting with
 zero), and then across the next row down, and then across the next row down,
 and so on, we can start to write out what this function must look like, reading
-off the tree.  
-
-<br>
+off the tree.
 
 | $n$    | $0$ | $1$ | $2$   | $3$    | $4$    | $5$    | $6$    | $7$     | $...$ |
 |:------:| ---:| ---:| -----:| ------:| ------:| ------:| ------:| -------:|:-----:|
 | $s(n)$ | $0$ | $0$ | $0.1$ | $0.00$ | $0.01$ | $0.10$ | $0.11$ | $0.000$ | $...$ |
 
-<br>
-
 So, what is actually happening here? Well, we can break it down into a few
 different parts and name them (after all, names give power). I am going to
-leave the first $0$ as a special case, and just look at the rest of the tree.  
-
-<br>
+leave the first $0$ as a special case, and just look at the rest of the tree.
 
 For any particular node on the tree, we know that it is either equal to the
 node above it, or a particular power of $2$ greater than the node above it.
 But, this $n$ based numbering system has no notion of the tree, so let's just
 say that each node refers to some other node, a distance $d(n)$ behind it.
-
-<br>
 
 We can also see from the table and the tree that (other than for $n=0$) it is
 when $n$ is even that the (negative) power of $2$ is added, so let's call a
@@ -308,15 +266,11 @@ s(n - d(n)) + e(n)2^{-p(n)} & \text{if $n\neq0$}
 $$
 </div>
 
-As I said, names give power.  
-
-<br>
+As I said, names give power.
 
 So, now let's look at the table and the tree again to try to find these values,
 to see how far it goes back each time, to see what the power of $2$ added is,
 and to see when it is even.
-
-<br>
 
 | $n$    | $1$ | $2$   | $3$    | $4$    | $5$    | $6$    | $7$     | $...$ |
 |:------:| ---:| -----:| ------:| ------:| ------:| ------:| -------:|:-----:|
@@ -324,8 +278,6 @@ and to see when it is even.
 | $d(n)$ | $1$ |   $2$ |    $2$ |    $3$ |    $3$ |    $4$ |     $4$ | $...$ |
 | $e(n)$ | $0$ |   $1$ |    $0$ |    $1$ |    $0$ |    $1$ |     $0$ | $...$ |
 | $p(n)$ | $1$ |   $1$ |    $2$ |    $2$ |    $2$ |    $2$ |     $3$ | $...$ |
-
-<br>
 
 So now we can start building this up, thinking about what each of these things
 actually are. The easiest to define is possibly $e(n)$. $1$ if $n$ is even, $0$
@@ -343,8 +295,6 @@ $floor(x) = \lfloor{x}\rfloor$ and that is the largest integer that is smaller
 than or equal to $x$, and $ceiling(x) = \lceil{x}\rceil$ and that is the
 smallest integer that is greater than or equal to $x$.
 
-<br>
-
 The next most straight forward component of $s(n)$ is probably $d(n)$. Looking
 at the table (and the tree if you want), we can see that each node has the
 distance it needs to refer back increased by $1$ for each position across a row
@@ -358,8 +308,6 @@ $$ \therefore d(n) = \left\lfloor{\frac{n}{2}}\right\rfloor + 1 $$
 
 And now we only have one component left to find, $p(n)$.
 
-<br>
-
 If we look at the table, and particularly if we were to extend it further we
 can / would see that the values of $p(n)$ are grouped in groups of the same value
 which are each of a length double as long as the last. This is also intuitive
@@ -372,24 +320,16 @@ power of $2$ needed to get $n+2$ ($n+2$ because otherwise the ceiling would
 leave the beginnings of each group in the previous group), the changes will
 happen in the same place as the changes to $p(n)$.
 
-<br>
-
 So, if we let $f(n) = \left \lceil {\log_2{n + 2}} \right \rceil$ then:
-
-<br>
 
 | $n$    | $1$ | $2$ | $3$ | $4$ | $5$ | $6$ | $7$ | $8$ | $9$ | $10$ | $...$ |
 |:------:| ---:| ---:| ---:| ---:| ---:| ---:| ---:| ---:| ---:| ----:|:-----:|
 | $f(n)$ | $2$ | $2$ | $3$ | $3$ | $3$ | $3$ | $4$ | $4$ | $4$ |  $4$ | $...$ |
 
-<br>
-
 And conveniently, we can now see that that is just exactly one more than what
 we want for $p(n)$.
 
 $$ \therefore p(n) = \left \lceil {\log_2{n + 2}} \right \rceil - 1 $$
-
-<br>
 
 So, now we have...
 
@@ -438,9 +378,7 @@ take it.
 Despite the fact that this seems to make sense to me, this is also something
 that it looks like a lot of smart people have spent quite a while thinking
 about, and all seem to agree on. Even _I_ can see at least one potentially
-serious problem with it. So, I certainly expect to be wrong about this.  
-
-<br>
+serious problem with it. So, I certainly expect to be wrong about this.
 
 However, I do look forward to finding out where, and why. And so, if you want
 to let me know, there are contact details just below.

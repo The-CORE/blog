@@ -63,6 +63,10 @@ def build():
     build_archive(posts)
 
 
+def _make_file_name(name):
+    return name.lower().replace('- ', '').replace(' ', '-')
+
+
 def _get_posts():
     posts = []
 
@@ -85,9 +89,13 @@ def _get_posts():
 
         if post_data['should_update_time']:
             with open(data_directory, 'w') as post_data_json_file:
-                post_data['should_update_time'] = False
                 post_data['time'] = post_time
-                json.dump(post_data, post_data_json_file)
+                json.dump(
+                    post_data,
+                    post_data_json_file,
+                    sort_keys=True,
+                    separators=(',', ': ')
+                )
 
         markdown_with_extensions = markdown.Markdown(extensions=EXTENSIONS)
 
@@ -152,7 +160,7 @@ def build_pages(posts):
 
         post_output_directory = os.path.join(
             OUTPUT_DIRECTORY,
-            post['post_name'].lower().replace(' ', '-'),
+            _make_file_name(post['post_name']),
             'index.html'
         )
         os.makedirs(os.path.dirname(post_output_directory), exist_ok=True)
@@ -177,7 +185,7 @@ def build_index(posts):
             posts, key=lambda post: post['post_time'], reverse=True
     )[:NUMBER_OF_POSTS_ON_INDEX]:
         truncated_posts_html += truncated_post_template.format(
-            link=post['post_name'].lower().replace(' ', '-'),
+            link=_make_file_name(post['post_name']),
             title=post['post_name'],
             time=post['post_time'],
             abstract=post['abstract_html']
@@ -223,7 +231,7 @@ def build_archive(posts):
             posts, key=lambda post: post['post_time'], reverse=True
     ):
         truncated_posts_html += truncated_post_template.format(
-            link=post['post_name'].lower().replace(' ', '-'),
+            link=_make_file_name(post['post_name']),
             title=post['post_name'],
             time=post['post_time'],
             abstract=post['abstract_html']
@@ -276,7 +284,7 @@ def decimal_time():
     # Also below is just for show really, to make clear what is happening.
     microseconds_in_this_year = (366 if is_leap_year else 365) * 86400000000
     days_into_this_year = now.day + sum(days_in_months[1:now.month])
-    hours_into_this_year = days_into_this_year * 24 + hour
+    hours_into_this_year = days_into_this_year * 24 + now.hour
     minutes_into_this_year = hours_into_this_year * 60 + now.minute
     seconds_into_this_year = minutes_into_this_year * 60 + now.second
     microseconds_into_this_year = (

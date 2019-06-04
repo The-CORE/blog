@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 425.2 141.73"
+   version="1.1"
+   sodipodi:docname="infinity_trees_crossed_out.svg"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14">
+  <metadata
+     id="metadata2966">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>infinity_trees</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1364"
+     inkscape:window-height="736"
+     id="namedview2964"
+     showgrid="false"
+     inkscape:zoom="2.0037629"
+     inkscape:cx="212.60001"
+     inkscape:cy="70.864998"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1" />
+  <defs
+     id="defs2741">
+    <style
+       id="style2739">.cls-1{font-size:13.97px;}.cls-1,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7{fill:#fff;}.cls-1,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6{font-family:CourierNewPS-BoldMT, Courier New;font-weight:700;}.cls-2{font-size:11.82px;}.cls-3{font-size:9.67px;}.cls-4{font-size:9.67px;}.cls-5{font-size:7.52px;}.cls-6{font-size:5.37px;}.cls-8{fill:none;stroke:#fff;stroke-miterlimit:10;}</style>
+  </defs>
+  <title
+     id="title2743">infinity_trees</title>
+  <text
+     class="cls-1"
+     transform="translate(213.89 19.19)"
+     id="text2745">0</text>
+  <text
+     class="cls-2"
+     transform="translate(132.6 42.03)"
+     id="text2747">0.0</text>
+  <text
+     class="cls-2"
+     transform="translate(284.86 42.03)"
+     id="text2749">0.1</text>
+  <text
+     class="cls-3"
+     transform="translate(69.12 64.86)"
+     id="text2751">0.00</text>
+  <text
+     class="cls-3"
+     transform="translate(160.48 64.86)"
+     id="text2753">0.01</text>
+  <text
+     class="cls-4"
+     transform="translate(251.89 64.88) rotate(0.1)"
+     id="text2755">0.10</text>
+  <text
+     class="cls-3"
+     transform="translate(343.18 64.86)"
+     id="text2757">0.11</text>
+  <text
+     class="cls-5"
+     transform="translate(25.94 87.7)"
+     id="text2759">0.000</text>
+  <text
+     class="cls-5"
+     transform="translate(76.69 87.7)"
+     id="text2761">0.001</text>
+  <text
+     class="cls-5"
+     transform="translate(127.45 87.7)"
+     id="text2763">0.010</text>
+  <text
+     class="cls-5"
+     transform="translate(279.7 87.7)"
+     id="text2765">0.100</text>
+  <text
+     class="cls-5"
+     transform="translate(228.95 87.7)"
+     id="text2767">0.101</text>
+  <text
+     class="cls-5"
+     transform="translate(330.43 87.7)"
+     id="text2769">0.110</text>
+  <text
+     class="cls-5"
+     transform="translate(381.2 87.7)"
+     id="text2771">0.111</text>
+  <text
+     class="cls-5"
+     transform="translate(178.2 87.7)"
+     id="text2773">0.011</text>
+  <text
+     class="cls-6"
+     transform="translate(1.42 110.48)"
+     id="text2775">0.0000</text>
+  <text
+     class="cls-6"
+     transform="translate(28.28 110.48)"
+     id="text2777">0.0001</text>
+  <text
+     class="cls-6"
+     transform="translate(55.15 110.48)"
+     id="text2779">0.0010</text>
+  <text
+     class="cls-6"
+     transform="translate(82.02 110.48)"
+     id="text2781">0.0011</text>
+  <text
+     class="cls-6"
+     transform="translate(108.89 110.48)"
+     id="text2783">0.0100</text>
+  <text
+     class="cls-6"
+     transform="translate(135.76 110.48)"
+     id="text2785">0.0101</text>
+  <text
+     class="cls-6"
+     transform="translate(162.63 110.48)"
+     id="text2787">0.0110</text>
+  <text
+     class="cls-6"
+     transform="translate(191.75 110.48)"
+     id="text2789">0.111</text>
+  <text
+     class="cls-6"
+     transform="translate(243.23 110.48)"
+     id="text2791">0.1011</text>
+  <text
+     class="cls-6"
+     transform="translate(216.36 110.48)"
+     id="text2793">0.1010</text>
+  <text
+     class="cls-6"
+     transform="translate(270.1 110.48)"
+     id="text2795">0.1000</text>
+  <text
+     class="cls-6"
+     transform="translate(296.97 110.48)"
+     id="text2797">0.1001</text>
+  <text
+     class="cls-6"
+     transform="translate(323.84 110.48)"
+     id="text2799">0.1100</text>
+  <text
+     class="cls-6"
+     transform="translate(350.71 110.48)"
+     id="text2801">0.1101</text>
+  <text
+     class="cls-6"
+     transform="translate(377.57 110.48)"
+     id="text2803">0.1110</text>
+  <text
+     class="cls-6"
+     transform="translate(404.44 110.48)"
+     id="text2805">0.1111</text>
+  <circle
+     class="cls-7"
+     cx="11.09"
+     cy="121.46"
+     r="1.61"
+     id="circle2807" />
+  <circle
+     class="cls-7"
+     cx="11.09"
+     cy="126.83"
+     r="1.61"
+     id="circle2809" />
+  <circle
+     class="cls-7"
+     cx="11.09"
+     cy="132.2"
+     r="1.61"
+     id="circle2811" />
+  <circle
+     class="cls-7"
+     cx="37.96"
+     cy="121.46"
+     r="1.61"
+     id="circle2813" />
+  <circle
+     class="cls-7"
+     cx="37.96"
+     cy="126.83"
+     r="1.61"
+     id="circle2815" />
+  <circle
+     class="cls-7"
+     cx="37.96"
+     cy="132.2"
+     r="1.61"
+     id="circle2817" />
+  <circle
+     class="cls-7"
+     cx="64.82"
+     cy="121.46"
+     r="1.61"
+     id="circle2819" />
+  <circle
+     class="cls-7"
+     cx="64.82"
+     cy="126.83"
+     r="1.61"
+     id="circle2821" />
+  <circle
+     class="cls-7"
+     cx="64.82"
+     cy="132.2"
+     r="1.61"
+     id="circle2823" />
+  <circle
+     class="cls-7"
+     cx="91.69"
+     cy="121.46"
+     r="1.61"
+     id="circle2825" />
+  <circle
+     class="cls-7"
+     cx="91.69"
+     cy="126.83"
+     r="1.61"
+     id="circle2827" />
+  <circle
+     class="cls-7"
+     cx="91.69"
+     cy="132.2"
+     r="1.61"
+     id="circle2829" />
+  <circle
+     class="cls-7"
+     cx="118.56"
+     cy="121.46"
+     r="1.61"
+     id="circle2831" />
+  <circle
+     class="cls-7"
+     cx="118.56"
+     cy="126.83"
+     r="1.61"
+     id="circle2833" />
+  <circle
+     class="cls-7"
+     cx="118.56"
+     cy="132.2"
+     r="1.61"
+     id="circle2835" />
+  <circle
+     class="cls-7"
+     cx="145.43"
+     cy="121.46"
+     r="1.61"
+     id="circle2837" />
+  <circle
+     class="cls-7"
+     cx="145.43"
+     cy="126.83"
+     r="1.61"
+     id="circle2839" />
+  <circle
+     class="cls-7"
+     cx="145.43"
+     cy="132.2"
+     r="1.61"
+     id="circle2841" />
+  <circle
+     class="cls-7"
+     cx="172.29"
+     cy="121.46"
+     r="1.61"
+     id="circle2843" />
+  <circle
+     class="cls-7"
+     cx="172.29"
+     cy="126.83"
+     r="1.61"
+     id="circle2845" />
+  <circle
+     class="cls-7"
+     cx="172.29"
+     cy="132.2"
+     r="1.61"
+     id="circle2847" />
+  <circle
+     class="cls-7"
+     cx="199.81"
+     cy="121.46"
+     r="1.61"
+     id="circle2849" />
+  <circle
+     class="cls-7"
+     cx="199.81"
+     cy="126.83"
+     r="1.61"
+     id="circle2851" />
+  <circle
+     class="cls-7"
+     cx="199.81"
+     cy="132.2"
+     r="1.61"
+     id="circle2853" />
+  <circle
+     class="cls-7"
+     cx="226.03"
+     cy="121.46"
+     r="1.61"
+     id="circle2855" />
+  <circle
+     class="cls-7"
+     cx="226.03"
+     cy="126.83"
+     r="1.61"
+     id="circle2857" />
+  <circle
+     class="cls-7"
+     cx="226.03"
+     cy="132.2"
+     r="1.61"
+     id="circle2859" />
+  <circle
+     class="cls-7"
+     cx="252.9"
+     cy="121.46"
+     r="1.61"
+     id="circle2861" />
+  <circle
+     class="cls-7"
+     cx="252.9"
+     cy="126.83"
+     r="1.61"
+     id="circle2863" />
+  <circle
+     class="cls-7"
+     cx="252.9"
+     cy="132.2"
+     r="1.61"
+     id="circle2865" />
+  <circle
+     class="cls-7"
+     cx="279.77"
+     cy="121.46"
+     r="1.61"
+     id="circle2867" />
+  <circle
+     class="cls-7"
+     cx="279.77"
+     cy="126.83"
+     r="1.61"
+     id="circle2869" />
+  <circle
+     class="cls-7"
+     cx="279.77"
+     cy="132.2"
+     r="1.61"
+     id="circle2871" />
+  <circle
+     class="cls-7"
+     cx="306.64"
+     cy="121.46"
+     r="1.61"
+     id="circle2873" />
+  <circle
+     class="cls-7"
+     cx="306.64"
+     cy="126.83"
+     r="1.61"
+     id="circle2875" />
+  <circle
+     class="cls-7"
+     cx="306.64"
+     cy="132.2"
+     r="1.61"
+     id="circle2877" />
+  <circle
+     class="cls-7"
+     cx="333.51"
+     cy="121.46"
+     r="1.61"
+     id="circle2879" />
+  <circle
+     class="cls-7"
+     cx="333.51"
+     cy="126.83"
+     r="1.61"
+     id="circle2881" />
+  <circle
+     class="cls-7"
+     cx="333.51"
+     cy="132.2"
+     r="1.61"
+     id="circle2883" />
+  <circle
+     class="cls-7"
+     cx="360.37"
+     cy="121.46"
+     r="1.61"
+     id="circle2885" />
+  <circle
+     class="cls-7"
+     cx="360.37"
+     cy="126.83"
+     r="1.61"
+     id="circle2887" />
+  <circle
+     class="cls-7"
+     cx="360.37"
+     cy="132.2"
+     r="1.61"
+     id="circle2889" />
+  <circle
+     class="cls-7"
+     cx="387.24"
+     cy="121.46"
+     r="1.61"
+     id="circle2891" />
+  <circle
+     class="cls-7"
+     cx="387.24"
+     cy="126.83"
+     r="1.61"
+     id="circle2893" />
+  <circle
+     class="cls-7"
+     cx="387.24"
+     cy="132.2"
+     r="1.61"
+     id="circle2895" />
+  <circle
+     class="cls-7"
+     cx="414.11"
+     cy="121.46"
+     r="1.61"
+     id="circle2897" />
+  <circle
+     class="cls-7"
+     cx="414.11"
+     cy="126.83"
+     r="1.61"
+     id="circle2899" />
+  <circle
+     class="cls-7"
+     cx="414.11"
+     cy="132.2"
+     r="1.61"
+     id="circle2901" />
+  <line
+     class="cls-8"
+     x1="218.08"
+     y1="21.78"
+     x2="143.24"
+     y2="32.44"
+     id="line2903" />
+  <line
+     class="cls-8"
+     x1="218.08"
+     y1="21.78"
+     x2="295.49"
+     y2="32.44"
+     id="line2905" />
+  <line
+     class="cls-8"
+     x1="143.24"
+     y1="44.62"
+     x2="80.73"
+     y2="55.27"
+     id="line2907" />
+  <line
+     class="cls-8"
+     x1="143.24"
+     y1="44.62"
+     x2="172.08"
+     y2="55.27"
+     id="line2909" />
+  <line
+     class="cls-8"
+     x1="295.49"
+     y1="44.62"
+     x2="263.43"
+     y2="55.27"
+     id="line2911" />
+  <line
+     class="cls-8"
+     x1="295.49"
+     y1="44.62"
+     x2="350.64"
+     y2="55.27"
+     id="line2913" />
+  <line
+     class="cls-8"
+     x1="80.73"
+     y1="67.45"
+     x2="37.22"
+     y2="81.16"
+     id="line2915" />
+  <line
+     class="cls-8"
+     x1="80.73"
+     y1="67.45"
+     x2="89.6"
+     y2="81.16"
+     id="line2917" />
+  <line
+     class="cls-8"
+     x1="172.08"
+     y1="67.45"
+     x2="138.73"
+     y2="81.16"
+     id="line2919" />
+  <line
+     class="cls-8"
+     x1="172.08"
+     y1="67.45"
+     x2="189.48"
+     y2="81.16"
+     id="line2921" />
+  <line
+     class="cls-8"
+     x1="263.43"
+     y1="67.45"
+     x2="240.23"
+     y2="81.16"
+     id="line2923" />
+  <line
+     class="cls-8"
+     x1="263.43"
+     y1="67.45"
+     x2="290.98"
+     y2="81.16"
+     id="line2925" />
+  <line
+     class="cls-8"
+     x1="354.78"
+     y1="67.45"
+     x2="341.71"
+     y2="81.16"
+     id="line2927" />
+  <line
+     class="cls-8"
+     x1="354.78"
+     y1="67.45"
+     x2="392.48"
+     y2="81.16"
+     id="line2929" />
+  <line
+     class="cls-8"
+     x1="37.22"
+     y1="90.29"
+     x2="11.09"
+     y2="105.52"
+     id="line2931" />
+  <line
+     class="cls-8"
+     x1="37.22"
+     y1="90.29"
+     x2="37.96"
+     y2="105.52"
+     id="line2933" />
+  <line
+     class="cls-8"
+     x1="89.6"
+     y1="90.29"
+     x2="64.82"
+     y2="105.52"
+     id="line2935" />
+  <line
+     class="cls-8"
+     x1="89.6"
+     y1="90.29"
+     x2="91.69"
+     y2="105.52"
+     id="line2937" />
+  <line
+     class="cls-8"
+     x1="138.73"
+     y1="90.29"
+     x2="118.56"
+     y2="105.52"
+     id="line2939" />
+  <line
+     class="cls-8"
+     x1="138.73"
+     y1="90.29"
+     x2="145.43"
+     y2="104.93"
+     id="line2941" />
+  <line
+     class="cls-8"
+     x1="189.48"
+     y1="90.29"
+     x2="172.29"
+     y2="105.52"
+     id="line2943" />
+  <line
+     class="cls-8"
+     x1="189.48"
+     y1="90.29"
+     x2="199.81"
+     y2="105.52"
+     id="line2945" />
+  <line
+     class="cls-8"
+     x1="240.23"
+     y1="90.29"
+     x2="226.03"
+     y2="105.52"
+     id="line2947" />
+  <line
+     class="cls-8"
+     x1="240.23"
+     y1="90.29"
+     x2="252.9"
+     y2="105.52"
+     id="line2949" />
+  <line
+     class="cls-8"
+     x1="290.98"
+     y1="90.29"
+     x2="279.77"
+     y2="105.52"
+     id="line2951" />
+  <line
+     class="cls-8"
+     x1="290.98"
+     y1="90.29"
+     x2="306.64"
+     y2="105.52"
+     id="line2953" />
+  <line
+     class="cls-8"
+     x1="341.71"
+     y1="90.29"
+     x2="333.51"
+     y2="105.52"
+     id="line2955" />
+  <line
+     class="cls-8"
+     x1="341.71"
+     y1="90.29"
+     x2="360.37"
+     y2="105.52"
+     id="line2957" />
+  <line
+     class="cls-8"
+     x1="392.48"
+     y1="90.29"
+     x2="387.24"
+     y2="105.52"
+     id="line2959" />
+  <line
+     class="cls-8"
+     x1="392.48"
+     y1="90.29"
+     x2="414.11"
+     y2="105.52"
+     id="line2961" />
+  <path
+     style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0404;stroke-width:2.03672099;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path3641"
+     d="m 317.15295,12.458612 c -8.36291,0.739336 -16.7315,1.664851 -25.00259,3.129293 -2.69997,0.478045 -5.38192,1.052899 -8.07288,1.57935 -14.66457,3.222336 -28.76275,8.557507 -42.35219,14.881086 -2.56967,1.195749 -5.09526,2.484026 -7.64291,3.726039 -11.88177,5.979217 -22.73021,13.776779 -33.36059,21.716481 -6.38262,4.927782 -12.48889,10.224405 -18.28247,15.833814 -1.87208,1.81257 -4.58923,4.629824 -6.4406,6.532072 -3.93111,4.283837 -7.81207,8.620567 -11.51929,13.100708 -2.32247,2.803532 -4.42636,5.788214 -6.4351,8.822645 -1.73519,2.58751 -3.46316,5.17142 -4.87689,7.95083 -0.80937,1.90973 -1.89244,3.67502 -2.87187,5.49585 -0.28324,0.52071 -0.46292,1.08015 -0.6236,1.64694 0,0 -7.15404,3.40626 -7.15404,3.40626 v 0 c 0.16699,-0.62311 0.32608,-1.25105 0.61566,-1.83221 0.97093,-1.86931 2.23523,-3.57994 3.02325,-5.54865 1.41967,-2.82701 3.15203,-5.45742 4.93369,-8.06904 2.00268,-3.10185 4.16321,-6.12133 6.52806,-8.956851 3.84996,-4.605991 7.95607,-8.993528 12.04476,-13.386571 1.53836,-1.544587 5.20574,-5.243487 6.69837,-6.669472 5.92031,-5.655967 12.13738,-11.012789 18.60061,-16.037548 13.80892,-10.291727 28.17754,-19.863853 43.60883,-27.58657 2.52235,-1.213503 5.0239,-2.471204 7.56704,-3.640508 13.67409,-6.287181 27.83443,-11.575121 42.54311,-14.871461 2.75531,-0.565893 5.50131,-1.179124 8.26594,-1.697679 8.78373,-1.647556 17.66361,-2.7468453 26.48685,-4.1525335 0,0 -6.28115,4.6277255 -6.28115,4.6277255 z"
+     inkscape:connector-curvature="0" />
+  <path
+     style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0404;stroke-width:2.03672099;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path3643"
+     d="m 121.31876,26.68552 c 17.91522,3.695313 34.72779,11.245038 51.50777,18.287391 28.81441,12.171062 56.77102,26.304797 84.03319,41.621476 4.1341,2.32265 8.22189,4.726725 12.33284,7.090088 10.65596,6.308998 21.00287,13.207375 30.38794,21.311905 3.3123,2.86035 4.2989,3.92826 7.25148,6.85721 3.11872,3.12381 5.68831,6.69665 8.16695,10.32731 0.68213,0.86065 1.20324,1.82534 1.79685,2.74377 0,0 -6.83028,3.96352 -6.83028,3.96352 v 0 c -0.53851,-0.94276 -1.01393,-1.92123 -1.64552,-2.80959 -2.22644,-3.70291 -4.47654,-7.40287 -7.35148,-10.65567 -2.84701,-3.23632 -3.3738,-3.95027 -6.66666,-7.14364 C 285.59329,109.8338 275.81482,102.58589 265.6732,95.961282 254.8411,89.160727 251.42322,86.865695 239.92366,80.314841 217.4801,67.529607 194.23605,56.151006 170.16194,46.760168 152.267,40.162223 134.11597,32.785169 114.90812,31.254909 c 0,0 6.41064,-4.569389 6.41064,-4.569389 z"
+     inkscape:connector-curvature="0" />
+</svg>
